@@ -9,3 +9,5 @@ Rationale: Comments improve code readability, making it easier for team members 
 #3 Use Descriptive and Professional Naming Conventions:
 Rule: Choose clear, descriptive, and professional names for variables, functions, IDs, classes, and other code entities to enhance code readability and understanding.
 Rationale: Descriptive names improve code comprehension, making it easier for team members to work on the project collaboratively and efficiently.
+
+#4 Don't touch other members' files before getting permission.
