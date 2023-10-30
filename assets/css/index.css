@@ -1,0 +1,55 @@
+@font-face {
+    font-family: Inter;
+    src: url("assets\\fonts\\Inter.ttf");
+}
+
+.home-welcome-section {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #FEBD00;
+
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+
+.home-welcome-img-container {
+    width: 60%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.home-welcome-img {
+    width: 70%;
+    height: max-content;
+
+    border-radius: 2%;
+}
+
+
+
+.home-welcome-p-container {
+    width: 35%;
+
+    display: flex;
+    align-items: center;
+}
+
+.home-welcome-p {
+    font-size: 61px;
+    font-weight: bold;
+    font-family: Inter;
+    color: white;
+
+    padding-left: 10%;
+}
