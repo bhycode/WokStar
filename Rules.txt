@@ -11,3 +11,5 @@ Rule: Choose clear, descriptive, and professional names for variables, functions
 Rationale: Descriptive names improve code comprehension, making it easier for team members to work on the project collaboratively and efficiently.
 
 #4 Don't touch other members' files before getting permission.
+
+#5 Don't forget to pull and push the edits.
