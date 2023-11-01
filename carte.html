@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/carte.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg" style="background-color: rgb(214, 35, 0);">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img class="logo" src="assets/imgs/Logo.png" alt="logo" width="60"
+                        height="70"></a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link " href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Card</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <a href="#">
+                <img src="assets/imgs/panier.png" alt="panier" height="40" width="40" style="margin-right: 20px;">
+            </a>
+        </nav>
+    </header>
+    <!-- section image -->
+    <section class="section1">
+        <div class="img-div">
+            <h1>Card</h1>
+        </div>
+    </section>
+    <!-- section menu déroulant -->
+    <section>
+        <div class="dropdown" id="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Menu categories
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#" value="appetizer">Appetizer</a></li>
+                <li><a class="dropdown-item" href="#" value="dishes">Main dishes</a></li>
+                <li><a class="dropdown-item" href="#" value="drinks">Drinks</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- menu card sections -->
+    <!-- Entrees -->
+    <div id="menu-container">
+        <section class="menu-section hidden" id="appetizer">
+            <div class="menu-row">
+                <div class="plat-div" id="1">
+                    <img src="assets/imgs/Salades_asiatique.jpg" alt="Salades asiatique" width="280" height="320">
+                    <div class="description-div" id="asian_salad">
+                        <h3>Asian salads</h3>
+                        <p>Fresh salads with ingredients such as grilled chicken, sliced beef, tofu, crisp vegetables,
+                            and
+                            various dressings.
+                        </p>
+                        <p class="price">69 DH</p>
+                        <button onclick="addToCart(1)">Add to cart</button>
+                        <button class="personalize-button" data-div-id="asian_salad"
+                            onclick="addToPersonalize(1)">Personalize</button>
+                    </div>
+                </div>
+                <div class="plat-div" id="2">
+                    <img src="assets/imgs/Rouleaux_de_printemps.jpg" alt="Rouleaux_de_printemps" width="280"
+                        height="320">
+                    <div class="description-div">
+                        <h3>Spring rolls</h3>
+                        <p>These fresh rolls are made with thin rice wrappers filled with fresh vegetables, shrimp,
+                            chicken,
+                            or tofu.
+                        </p>
+                        <p class="price">72 DH</p>
+                        <button onclick="addToCart(2)">Add to cart</button>
+                        <button class="personalize-button" data-div-id="appetizer"
+                            onclick="addToPersonalize(2)">Personalize</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-row">
+                <div class="plat-div" id="3">
+                    <img src="assets/imgs/Dumplings .jpg" alt="Dumplings" width="280" height="320">
+                    <div class="description-div">
+                        <h3>Dumplings</h3>
+                        <p>Small pockets of dough filled with meat (pork, chicken, beef) or vegetables.
+                        </p>
+                        <p class="price">90 DH</p>
+                        <button onclick="addToCart(3)">Add to cart</button>
+                        <button onclick="addToPersonalize(3)">Personalize</button>
+                    </div>
+                </div>
+                <div class="plat-div" id="4">
+                    <img src="assets/imgs/Samosas.jpg " alt="Samosas" width="280" height="320">
+                    <div class="description-div">
+                        <h3>Samosas</h3>
+                        <p>Triangles of pastry filled with potatoes, vegetables, and meat.
+                        </p>
+                        <p class="price">69 DH</p>
+                        <button onclick="addToCart(4)">Add to cart</button>
+                        <button onclick="addToPersonalize(4)">Personalize</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-row">
+                <div class="plat-div" id="5">
+                    <img src="assets/imgs/Tempura.webp" alt="Tempura" width="280" height="320">
+                    <div class="description-div">
+                        <h3>Tempura</h3>
+                        <p>consisting of shrimp, vegetables, or other ingredients fried in a light and crispy batter.
+                        </p>
+                        <p class="price">44 DH</p>
+                        <button onclick="addToCart(5)">Add to cart</button>
+                        <button onclick="addToPersonalize(5)">Personalize</button>
+                    </div>
+                </div>
+                <div class="plat-div" id="6">
+                    <img src="assets/imgs/MisoSoup.webp " alt="MisoSoup" width="280" height="320">
+                    <div class="description-div">
+                        <h3>Miso soup</h3>
+                        <p>made from fermented soybean paste (miso), tofu, seaweed, and sometimes other ingredients like
+                            mushrooms or green onions
+                        </p>
+                        <p class="price">69 DH</p>
+                        <button onclick="addToCart(6)">Add to cart</button>
+                        <button onclick="addToPersonalize(6)">Personalize</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-row">
+                <div class="plat-div" id="7">
+                    <img src="assets/imgs/nems-au-poulet.jpg" alt="Nems" width="280" height="320">
+                    <div class="description-div">
+                        <h3>Nems</h3>
+                        <p>spring rolls fried, filled with minced meat, shrimp, vegetables, and rice vermicelli.
+                        </p>
+                        <p class="price">42 DH</p>
+                        <button onclick="addToCart(7)">Add to cart</button>
+                        <button onclick="addToPersonalize(7)">Personalize</button>
+                    </div>
+                </div>
+                <div class="plat-div" id="8">
+                    <img src="assets/imgs/Edamame.jpg " alt="Edamame" width="280" height="320">
+                    <div class="description-div">
+                        <h3>Edamame</h3>
+                        <p>Boiled immature soybeans sprinkled with salt.
+                        </p>
+                        <p class="price">58 DH</p>
+                        <button onclick="addToCart(8)">Add to cart</button>
+                        <button onclick="addToPersonalize(8)">Personalize</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-row">
+                <div class="plat-div" id="9">
+                    <img src="assets/imgs/-salmon-sashimi.jpg" alt="sashimi" width="280" height="320">
+                    <div class="description-div">
+                        <h3>Sashimis</h3>
+                        <p>Slices of raw salmon.
+                        </p>
+                        <p class="price">55 DH</p>
+                        <button onclick="addToCart(9)">Add to cart</button>
+                        <button onclick="addToPersonalize(9)">Personalize</button>
+                    </div>
+                </div>
+                <div class="plat-div" id="10">
+                    <img src="assets/imgs/Baozi.jpg " alt="Baozi" width="280" height="320">
+                    <div class="description-div">
+                        <h3>Baozi</h3>
+                        <p>Steamed buns filled with pork, chicken, vegetables, and other ingredients.
+                        </p>
+                        <p class="price">60 DH</p>
+                        <button onclick="addToCart(10)">Add to cart</button>
+                        <button onclick="addToPersonalize(10)">Personalize</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-row">
+                <div class="plat-div" id="11">
+                    <img src="assets/imgs/Crevettes grillées.jpeg" alt="Crevettes" width="280" height="320">
+                    <div class="description-div">
+                        <h3>Grilled shrimp</h3>
+                        <p>Flame-grilled shrimp seasoned with salt and pepper.
+                        </p>
+                        <p class="price">75 DH</p>
+                        <button onclick="addToCart(11)">Add to cart</button>
+                        <button onclick="addToPersonalize(11)">Personalize</button>
+                    </div>
+                </div>
+                <div class="plat-div" id="12">
+                    <img src="assets/imgs/-Calamars frits.jpeg " alt="Calamars" width="280" height="320">
+                    <div class="description-div">
+                        <h3>Fried squid</h3>
+                        <p>Rings of squid coated with batter and fried.
+                        </p>
+                        <p class="price">55 DH</p>
+                        <button onclick="addToCart(12)">Add to cart</button>
+                        <button onclick="addToPersonalize(12)">Personalize</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-row">
+                <div class="plat-div" id="13">
+                    <img src="assets/imgs/Kimchi.jpg" alt="Kimchi" width="280" height="320">
+                    <div class="description-div">
+                        <h3>Kimchi</h3>
+                        <p>Spicy fermented Chinese cabbage.
+                        </p>
+                        <p class="price">40 DH</p>
+                        <button onclick="addToCart(13)">Add to cart</button>
+                        <button onclick="addToPersonalize(13)">Personalize</button>
+                    </div>
+                </div>
+                <div class="plat-div" id="14">
+                    <img src="assets/imgs/Feuilles de vigne farcies.webp " alt="Baozi" width="280" height="320">
+                    <div class="description-div">
+                        <h3>Stuffed grape leaves</h3>
+                        <p> grape leaves filled with rice, meat, and herbs.
+                        </p>
+                        <p class="price">70 DH</p>
+                        <button onclick="addToCart(14)">Add to cart</button>
+                        <button onclick="addToPersonalize(14)">Personalize</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- main dishes -->
+        <section class="menu-section hidden" id="dishes">
+            <div class="menu-row">
+                <div class="plat-div" id="15">
+                    <img src="assets/imgs/Poulet au curry.jpg" alt="Poulet au curry" width="280" height="320">
+                    <div class="description-div">
+                        <h3>Chicken Curry</h3>
+                        <p>A spicy chicken dish, served with rice or noodles.
+                        </p>
+                        <p class="price">69 DH</p>
+                        <button onclick="addToCart(15)">Add to cart</button>
+                        <button class="personalize-button" data-div-id="appetizer"
+                            onclick="addToPersonalize(15)">Personalize</button>
+                    </div>
+                </div>
+                <div class="plat-div" id="16">
+                    <img src="assets/imgs/Poulet à l'orange.jpg" alt="Orange Chicken" width="280" height="320">
+                    <div class="description-div">
+                        <h3>Orange Chicken</h3>
+                        <p>made of breaded chicken pieces served with a sweet and tangy orange sauce.
+                        </p>
+                        <p class="price">59 DH</p>
+                        <button onclick="addToCart(16)">Add to cart</button>
+                        <button onclick="addToPersonalize(16)">Personalize</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-row">
+                <div class="plat-div" id="17">
+                    <img src="assets/imgs/Bœuf au brocoli.webp" alt="Beef with Broccoli" width="280" height="320">
+                    <div class="description-div">
+                        <h3>Beef with Broccoli</h3>
+                        <p>classic Chinese preparation that combines slices of beef, broccoli florets, and soy sauce.
+                        </p>
+                        <p class="price">75 DH</p>
+                        <button onclick="addToCart(17)">Add to cart</button>
+                        <button onclick="addToPersonalize(17)">Personalize</button>
+                    </div>
+                </div>
+                <div class="plat-div" id="18">
+                    <img src="assets/imgs/Pad thai.jpg" alt="Pad thai" width="280" height="320">
+                    <div class="description-div">
+                        <h3>Pad thai</h3>
+                        <p>consists of stir-fried rice noodles with vegetables, tofu, shrimp, or other proteins, all
+                            seasoned with a tamarind-based sauce.</p>
+                        <p class="price">55 DH</p>
+                        <button onclick="addToCart(18)">Add to cart</button>
+                        <button onclick="addToPersonalize(18)">Personalize</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-row">
+                <div class="plat-div" id="19">
+                    <img src="assets/imgs/Riz frit.jpg" alt="Fried Rice" width="280" height="320">
+                    <div class="description-div">
+                        <h3>Fried Rice</h3>
+                        <p>sauteed rice with various ingredients, such as vegetables, chicken,or shrimp.
+                        </p>
+                        <p class="price">55 DH</p>
+                        <button onclick="addToCart(19)">Add to cart</button>
+                        <button onclick="addToPersonalize(19)">Personalize</button>
+                    </div>
+                </div>
+                <div class="plat-div" id="20">
+                    <img src="assets/imgs/-Nouilles sautées.jpg" alt="-Nouilles sautées" width="280" height="320">
+                    <div class="description-div">
+                        <h3>Stir-fried noodles</h3>
+                        <p>Stir-fried noodles with vegetables and various proteins.</p>
+                        <p class="price">55 DH</p>
+                        <button onclick="addToCart(20)">Add to cart</button>
+                        <button onclick="addToPersonalize(20)">Personalize</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-row">
+                <div class="plat-div" id="21">
+                    <img src="assets/imgs/Tso-Tofu.jpg" alt="General Tso's Tofu" width="280" height="320">
+                    <div class="description-div">
+                        <h3>General Tso's Tofu</h3>
+                        <p>made with breaded and fried tofu.
+                        </p>
+                        <p class="price">50 DH</p>
+                        <button onclick="addToCart(21)">Add to cart</button>
+                        <button onclick="addToPersonalize(21)">Personalize</button>
+                    </div>
+                </div>
+                <div class="plat-div" id="22">
+                    <img src="assets/imgs/Curry_vegetarien.jpg" alt="Curry_vegetarien" width="280" height="320">
+                    <div class="description-div">
+                        <h3>Vegetarian curry</h3>
+                        <p>A fragrant curry made with vegetables, tofu, and paneer.</p>
+                        <p class="price">65 DH</p>
+                        <button onclick="addToCart(22)">Add to cart</button>
+                        <button onclick="addToPersonalize(22)">Personalize</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-row">
+                <div class="plat-div" id="23">
+                    <img src="assets/imgs/Aubergines au basilic thai.jpg" alt="Aubergines au basilic thaï " width="280"
+                        height="320">
+                    <div class="description-div">
+                        <h3>Thai Basil Eggplant</h3>
+                        <p>Eggplants stir-fried in a wok with Thai basil, garlic, and chilies
+                        </p>
+                        <p class="price">59 DH</p>
+                        <button onclick="addToCart(23)">Add to cart</button>
+                        <button onclick="addToPersonalize(23)">Personalize</button>
+                    </div>
+                </div>
+                <div class="plat-div" id="24">
+                    <img src="assets/imgs/pho.jpg" alt="pho" width="280" height="320">
+                    <div class="description-div">
+                        <h3>Pho</h3>
+                        <p>A rice noodle soup with beef or chicken, garnished with fresh herbs and condiments.</p>
+                        <p class="price">60 DH</p>
+                        <button onclick="addToCart(24)">Add to cart</button>
+                        <button onclick="addToPersonalize(24)">Personalize</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-row">
+                <div class="plat-div" id="25">
+                    <img src="assets/imgs/Biryani.jpg" alt="Biryani" width="280" height="320">
+                    <div class="description-div">
+                        <h3>Biryani</h3>
+                        <p>A dish of fragrant basmati rice cooked with spices, meat (such as chicken or lamb), and
+                            sometimes vegetables.
+                        </p>
+                        <p class="price">79 DH</p>
+                        <button onclick="addToCart(25)">Add to cart</button>
+                        <button onclick="addToPersonalize(25)">Personalize</button>
+                    </div>
+                </div>
+                <div class="plat-div" id="26">
+                    <img src="assets/imgs/Sushi.webp" alt="Sushi" width="280" height="320">
+                    <div class="description-div">
+                        <h3>Sushi</h3>
+                        <p>A variety of sushi prepared with raw fish, vinegared rice, vegetables, and nori seaweed.</p>
+                        <p class="price">75 DH</p>
+                        <button onclick="addToCart(26)">Add to cart</button>
+                        <button onclick="addToPersonalize(26)">Personalize</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-row">
+                <div class="plat-div" id="27">
+                    <img src="assets/imgs/Ramen.jpg" alt="Ramen" width="280" height="320">
+                    <div class="description-div">
+                        <h3>Ramen</h3>
+                        <p>A soup with noodles, broth, vegetables, and proteins such as chicken.
+                        </p>
+                        <p class="price">52 DH</p>
+                        <button onclick="addToCart(27)">Add to cart</button>
+                        <button onclick="addToPersonalize(27)">Personalize</button>
+                    </div>
+                </div>
+                <div class="plat-div" id="28">
+                    <img src="assets/imgs/Légumes sautés.jpeg" alt="Légumes sautés" width="280" height="320">
+                    <div class="description-div">
+                        <h3>Sauteed vegetables</h3>
+                        <p>Stir-fried vegetables with a light sauced.</p>
+                        <p class="price">55 DH</p>
+                        <button onclick="addToCart(28)">Add to cart</button>
+                        <button onclick="addToPersonalize(28)">Personalize</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- drinks section -->
+        <section id="drinks" class="menu-section hidden">
+            <div class="menu-row">
+                <div class="plat-div" id="29">
+                    <img src="assets/imgs/jasmine_tea.jpg" alt="Jasmine tea" width="280" height="320">
+                    <div class="description-div">
+                        <h3>Jasmine tea</h3>
+                        <p>Jasmine tea is a green tea scented with jasmine flowers, giving it a delicate and floral
+                            flavor
+                        </p>
+                        <p class="price">30 DH</p>
+                        <button onclick="addToCart(29)">Add to cart</button>
+                        <button onclick="addToPersonalize(29)">Personalize</button>
+                    </div>
+                </div>
+                <div class="plat-div" id="30">
+                    <img src="assets/imgs/Boissons aux fruits exotiques.jpg" alt="Boissons aux fruits exotiques"
+                        width="280" height="320">
+                    <div class="description-div">
+                        <h3>Exotic fruit drinks</h3>
+                        <p>Tropical fruit juices, such as mango juice, lychee juice, coconut juice, and guava juice.</p>
+
+                        <p class="price">39 DH</p>
+                        <button onclick="addToCart(30)">Add to cart</button>
+                        <button onclick="addToPersonalize(30)">Personalize</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-row">
+                <div class="plat-div" id="31">
+                    <img src="assets/imgs/Lassi.webp" alt="Lassi" width="280" height="320">
+                    <div class="description-div">
+                        <h3>Lassi</h3>
+                        <p> made from yogurt, milk, water, and fruits (mango lassi, strawberry lassi, etc.)
+                        </p>
+                        <p class="price">37 DH</p>
+                        <button onclick="addToCart(31)">Add to cart</button>
+                        <button onclick="addToPersonalize(31)">Personalize</button>
+                    </div>
+                </div>
+                <div class="plat-div" id="32">
+                    <img src="assets/imgs/Thé glacé.webp" alt="Thé glacé.webp" width="280" height="320">
+                    <div class="description-div">
+                        <h3>Iced tea</h3>
+                        <p>Iced tea is commonly served, whether it's black tea, green tea, or other varieties, sometimes
+                            sweetened.</p>
+
+                        <p class="price">25 DH</p>
+                        <button onclick="addToCart(32)">Add to cart</button>
+                        <button onclick="addToPersonalize(32)">Personalize</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-row">
+                <div class="plat-div" id="33">
+                    <img src="assets/imgs/Café vietnamien.jpg" alt="Café vietnamien" width="280" height="320">
+                    <div class="description-div">
+                        <h3>Vietnamese coffee</h3>
+                        <p>A strong coffee served with sweetened condensed milk, typically served cold.
+                        </p>
+                        <p class="price">32 DH</p>
+                        <button onclick="addToCart(33)">Add to cart</button>
+                        <button onclick="addToPersonalize(33)">Personalize</button>
+                    </div>
+                </div>
+                <div class="plat-div" id="34">
+                    <img src="assets/imgs/Boissons non alcoolisées asiatiques.webp"
+                        alt="Boissons non alcoolisées asiatiques" width="280" height="320">
+                    <div class="description-div">
+                        <h3>Asian non-alcoholic drinks</h3>
+                        <p>Non-alcoholic beverages such as coconut water, soy milk, milk tea (bubble tea or boba tea).
+                        </p>
+
+                        <p class="price">45 DH</p>
+                        <button onclick="addToCart(34)">Add to cart</button>
+                        <button onclick="addToPersonalize(34)">Personalize</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-row">
+                <div class="plat-div" id="35">
+                    <img src="assets/imgs/Yuzu Ade.jpg" alt="Yuzu Ade " width="280" height="320">
+                    <div class="description-div">
+                        <h3>Yuzu Ade </h3>
+                        <p>A carbonated beverage flavored with yuzu, a Japanese citrus fruit.
+                        </p>
+                        <p class="price">39 DH</p>
+                        <button onclick="addToCart(35)">Add to cart</button>
+                        <button onclick="addToPersonalize(35)">Personalize</button>
+                    </div>
+                </div>
+                <div class="plat-div" id="36">
+                    <img src="assets/imgs/Boissons au taro.webp" alt="Boissons au taro" width="280" height="320">
+                    <div class="description-div">
+                        <h3>Taro drinks</h3>
+                        <p>Drinks made from taro, a purple root, which can be served hot or cold</p>
+
+                        <p class="price">40 DH</p>
+                        <button onclick="addToCart(36)">Add to cart</button>
+                        <button onclick="addToPersonalize(36)">Personalize</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-row">
+                <div class="plat-div" id="37">
+                    <img src="assets/imgs/Chai.webp" alt="Chai" width="280" height="320">
+                    <div class="description-div">
+                        <h3>Chai</h3>
+                        <p>Chai is a spiced beverage made from black tea, milk, and a blend of spices, typically
+                            including cinnamon, ginger, cloves, and cardamom.
+                        </p>
+                        <p class="price">35 DH</p>
+                        <button onclick="addToCart(37)">Add to cart</button>
+                        <button onclick="addToPersonalize(37)">Personalize</button>
+                    </div>
+                </div>
+                <div class="plat-div" id="38">
+                    <img src="assets/imgs/Sugarcane Juice.webp" alt="Sugarcane Juice" width="280" height="320">
+                    <div class="description-div">
+                        <h3>Sugarcane Juice</h3>
+                        <p>A refreshing beverage, made from fresh sugarcane.</p>
+                        <p class="price">20 DH</p>
+                        <button onclick="addToCart(38)">Add to cart</button>
+                        <button onclick="addToPersonalize(38)">Personalize</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-row">
+                <div class="plat-div" id="39">
+                    <img src="assets/imgs/Aloe Vera Drink.jpeg" alt="Aloe Vera Drink " width="280" height="320">
+                    <div class="description-div">
+                        <h3>Aloe Vera Drink </h3>
+                        <p>A beverage made from aloe vera gel, typically flavored with fruits and sweetened.
+                        </p>
+                        <p class="price">35 DH</p>
+                        <button onclick="addToCart(39)">Add to cart</button>
+                        <button onclick="addToPersonalize(39)">Personalize</button>
+                    </div>
+                </div>
+                <div class="plat-div" id="40">
+                    <img src="assets/imgs/Teh Tarik.webp" alt="Teh Tarik " width="280" height="320">
+                    <div class="description-div">
+                        <h3>Teh Tarik </h3>
+                        <p>black tea mixed with sweetened milk, pulled to create a frothy top.</p>
+                        <p class="price">29 DH</p>
+                        <button onclick="addToCart(40)">Add to cart</button>
+                        <button onclick="addToPersonalize(40)">Personalize</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-row">
+                <div class="plat-div" id="41">
+                    <img src="assets/imgs/Calpis.jpg" alt="Calpis" width="280" height="320">
+                    <div class="description-div">
+                        <h3>Calpis</h3>
+                        <p>A slightly tangy dairy beverage made from fermented milk.
+                        </p>
+                        <p class="price">25 DH</p>
+                        <button onclick="addToCart(41)">Add to cart</button>
+                        <button onclick="addToPersonalize(41)">Personalize</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="social">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-facebook" viewBox="0 0 16 16">
+                    <path
+                        d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-instagram" viewBox="0 0 16 16">
+                    <path
+                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-whatsapp" viewBox="0 0 16 16">
+                    <path
+                        d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+                </svg>
+            </div>
+            <p class="copy">© Copyright, WORKSTAR 2023</p>
+            <div class="fat">
+                <span>Terms of Use</span>
+                <span>Privacy Statement</span>
+            </div>
+        </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script src="assets/js/carte.js"></script>
+</body>
+
+</html>
