@@ -1,3 +1,26 @@
+/* HEADER */
+header {
+    background-color: #502314;
+}
+
+header a {
+    color: white !important;
+}
+
+header .active {
+    color: #FEBD00 !important;
+}
+
+.header-basket {
+    fill: white !important;
+    width: 4%;
+
+}
+.burger-menu {
+    fill: white !important;
+}
+/* HEADER */
+
 #devis{
     display: flex;
     flex-direction: column;
