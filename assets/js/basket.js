@@ -21,7 +21,8 @@
 
 
 
-
+let list_plat2= JSON.parse(localStorage.getItem("list_plat"));
+console.log(list_plat2);
 
 // Sample item object
 var newItem = {

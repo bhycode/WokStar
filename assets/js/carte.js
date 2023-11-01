@@ -318,7 +318,6 @@ const list_plat=[
 
 localStorage.setItem("list_plat",JSON.stringify(list_plat))
 
-let list_plat2= JSON.parse(localStorage.getItem("list_plat"));
 
 // console.log(list_plat2)
 
