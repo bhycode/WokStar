@@ -10,6 +10,34 @@ body {
     margin: 0px;
 }
 
+/* HEADER */
+header {
+    width: 100%;
+    background-color: #502314;
+    position: fixed;
+    z-index: 10;
+    margin-bottom: 100px !important;
+}
+
+header a {
+    color: white !important;
+}
+
+header .active {
+    color: #FEBD00 !important;
+}
+
+.header-basket {
+    fill: white !important;
+    width: 4%;
+
+}
+.burger-menu {
+    fill: white !important;
+}
+/* HEADER */
+
+
 
  /* Welcome section  */
  /* Main container */
@@ -19,7 +47,7 @@ body {
     align-items: center;
     background-color: #FEBD00;
     padding-bottom: 20px;
-    padding-top: 20px;
+    padding-top: 100px;
     padding-left: 10px;
     padding-right: 10px;
 }
