@@ -1,0 +1,16 @@
+#devis{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10%;
+}
+
+.infos-customer {
+    margin-left: 70%;
+    margin-top: 10%;
+/* text-align: right; */
+}
+table tr th {
+    border: solid;
+}
