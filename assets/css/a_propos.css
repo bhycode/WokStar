@@ -2,6 +2,30 @@
 *{
     font-family: 'Inter';
 }
+/* HEADER */
+header {
+    width: 100%;
+    background-color: #502314;
+}
+
+header a {
+    color: white !important;
+}
+
+header .active {
+    color: #FEBD00 !important;
+}
+
+.header-basket {
+    fill: white !important;
+    width: 4%;
+
+}
+.burger-menu {
+    fill: white !important;
+}
+/* HEADER */
+
 .total-div{
     display: flex;
     align-items: center;
@@ -72,7 +96,7 @@
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-template-rows: repeat(4,0.6fr);
-    gap: 12px 25px;
+    gap: 20px 25px;
 }
 
 .item1{
@@ -86,6 +110,7 @@
 .item3{
     grid-row: 3/4;
     grid-column: 3/3;
+    margin-top: -33px;
 }
 .item4{
     grid-row: 2/4;
@@ -93,10 +118,12 @@
 }
 
 .item2 img,.item3 img{
+    size: cover;
     width: 450px;
     height: 450px;
 }
 .item1 img,.item4 img{
+    background-position: center;
     width: 450px;
     height: 730px;
 }
