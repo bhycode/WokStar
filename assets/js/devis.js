@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 // const food_items_list=[
 //     {
 //         id:1,
