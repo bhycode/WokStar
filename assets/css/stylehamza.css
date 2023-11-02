@@ -1,12 +1,12 @@
 body{
-    background-image: url(cropped-blur-background-of-pub-restaurant-with-wood-table-628137314_2125x1416.jpg);
+    background-image: url(/assets/images/personalization/cropped-blur-background-of-pub-restaurant-with-wood-table-628137314_2125x1416.jpg  );
 
 }
 .title{
     display: flex;
     justify-content: center;
     
-    color: #ffffff;
+    color: #662c2c;
     margin-top: 40px;
 }
 #confirmationMessage {
@@ -33,7 +33,7 @@ body{
     background-color: #FEBD00;
     border-radius: 10px;
     width: 300px;
-    margin: 37px;
+    margin: 29px;
     box-shadow: 0 0 10px 5px rgba(55, 55, 55, 0.5); /* Adding shadow effect */
 }
 .tiltlebord{
@@ -80,7 +80,7 @@ body{
   border-radius: 10px;
   display: flex;
   margin: 50px;
-  margin-left: 140px;
+  margin-left: 127px;;
 }
 
 

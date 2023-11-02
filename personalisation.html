@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylehamza.css">
+    <link rel="stylesheet" href="assets/css/stylehamza.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!-- <link rel="stylesheet" href="stylehamza.css"> -->
     <title>Document</title>
@@ -12,7 +12,7 @@
     <header>
         <nav class="navbar navbar-expand-lg" style="background-color: rgb(214, 35, 0);">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#"><img class="logo" src="LOGO.png" alt="" style="height: 47px;"></a>
+    <a class="navbar-brand" href="#"><img class="logo" src="assets/images/personalization/LOGO.png" alt="" style="height: 47px;"></a>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,13 +40,13 @@
     </div>
    
   </div>
-  <a class="navbar-brand1" href="basket.html"><img class="logo" src="add-to-cart.png" alt="" style="height: 47px;"></a>
+  <a class="navbar-brand1" href="basket.html"><img class="logo" src="assets/images/personalization/add-to-cart.png" alt="" style="height: 47px;"></a>
 </nav>
     </header>
     <h1 class="title ">PERSONALIZATION</h1>
-    <section class="personalization">
+    <section class="personalization" id="border1">
     <p class="tiltlebord">name of food</p>
-    <img class="pizza" src="pizza.png">
+    <img class="pizza" src="assets/images/personalization/">
     <div class="descrip">
     <p  class="text-brown fs-" style="color: brown; font-family: monospace;">description:</p>
     <p  class="text-danger d-flex justify-content-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, animi voluptatem nostrum quod quos harum officia nam quaerat accusamus optio quidem enim, neque in. Animi optio reprehenderit fugit deleniti quasi!</p>
@@ -61,16 +61,39 @@
   <section class="adding">
     <p>Customize Your Plate</p>
     <div class="inputs">
-    <input type="text" id="dataInput" placeholder="Add souces">
-    <input type="text" id="dataInput" placeholder="Size">
-    <input type="text" id="dataInput" placeholder="Extra items">
-  </div>
-    <button class="boton">Add to Plate</button>
-    
-  </section>
+        <select id="souceInput">
+            <option value="" data-price="0">Choose a souce</option>
+            <option value="Rice Vinegar" data-price="25">Rice Vinegar <span>25 DH</span></option>
+            <option value="Miso" data-price="30">Miso <span>30 DH</span></option>
+            <option value="Dashi" data-price="20">Dashi <span>20 DH</span></option>
+            <option value="Mirin" data-price="40">Mirin <span>40 DH</span></option>
+            <option value="Chopsticks" data-price="15">Chopsticks <span>15 DH</span></option>
+        </select>
+
+        <select id="sizeInput">
+            <option value="" data-price="0">Choose a size</option>
+            <option value="Small" data-price="50">Small <span>50 DH</span></option>
+            <option value="Medium" data-price="70">Medium <span>70 DH</span></option>
+            <option value="Large" data-price="90">Large <span>90 DH</span></option>
+            <option value="Extra Large" data-price="110">Extra Large <span>110 DH</span></option>
+            <option value="Custom" data-price="120">Custom <span>120 DH</span></option>
+        </select>
+
+        <select id="extraInput">
+            <option value="" data-price="0">Choose extra items</option>
+            <option value="Matcha" data-price="15">Matcha <span>15 DH</span></option>
+            <option value="Sake" data-price="25">Sake <span>25 DH</span></option>
+            <option value="Tsukemono" data-price="20">Tsukemono <span>20 DH</span></option>
+            <option value="Yuzu" data-price="30">Yuzu <span>30 DH</span></option>
+            <option value="Seaweed" data-price="35">Seaweed <span>35 DH</span></option>
+        </select>
+    </div>
+    <button class="boton" onclick="calculateTotalPrice()">Add to Plate</button>
+    <p>Total Price: <span id="totalPrice">0</span> DH</p>
+</section>
   <div>
-    <button class="buy" id="dataInput">BUY NOW</button>
-    <p id="confirmationMessage">Your plate is saved in the cart.</p>
+    <button class="buy" onclick="clickcounter()" id="dataInput" data-div-id="border1">BUY NOW</button>
+    <p id="confirmationMessage" class="bg-success">Your plate is saved in the cart.</p>
   </div>
 
   <footer class="footer">
@@ -94,6 +117,6 @@
 
   </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="hamza.js"></script>
+    <script src="assets/js/hamza.js"></script>
 </body>
 </html>

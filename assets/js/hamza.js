@@ -1,25 +1,27 @@
 document.addEventListener('DOMContentLoaded', function() {
     const validButton = document.querySelector('.boton');
-    const inputs = document.querySelectorAll('.adding input');
+    const dropdowns = document.querySelectorAll('.adding select');
     const firstBordered = document.querySelector('.personalization .element');
 
     validButton.addEventListener('click', function() {
-        let inputText = '';
+        let dropdownText = '';
 
-        // Gather the text from all input fields
-        inputs.forEach(input => {
-            inputText += input.value + " / ";
-            // Clear the input fields after gathering the text
-            input.value = '';
+        // Gather the selected values from all dropdowns
+        dropdowns.forEach(dropdown => {
+            dropdownText += dropdown.options[dropdown.selectedIndex].text + " / ";
+            // Reset the dropdown selections to the default option
+            dropdown.selectedIndex = 0;
         });
 
         // Create a new paragraph element
         const newText = document.createElement('p');
-        newText.textContent = inputText;
+        newText.textContent = dropdownText;
 
         // Append the new text to the first bordered element
         firstBordered.appendChild(newText);
     });
+});
+
     // Get the BUY NOW button element
 const buyNowButton = document.querySelector('.buy');
 const confirmationMessage = document.getElementById('confirmationMessage');
@@ -57,7 +59,23 @@ function addToPlate() {
     console.log('Size:', size);
     console.log('Extra Items:', extraItems);
 }
+function calculateTotalPrice() {
+    const souceInput = document.getElementById('souceInput');
+    const sizeInput = document.getElementById('sizeInput');
+    const extraInput = document.getElementById('extraInput');
+
+    const selectedSaucePrice = parseFloat(souceInput.options[souceInput.selectedIndex].getAttribute('data-price')) || 0;
+    const selectedSizePrice = parseFloat(sizeInput.options[sizeInput.selectedIndex].getAttribute('data-price')) || 0;
+    const selectedExtraPrice = parseFloat(extraInput.options[extraInput.selectedIndex].getAttribute('data-price')) || 0;
+
+    const totalPrice = selectedSaucePrice + selectedSizePrice + selectedExtraPrice;
+    
+    document.getElementById('totalPrice').textContent = totalPrice;
+}
 
 
-});
+;
+
+
+
 
