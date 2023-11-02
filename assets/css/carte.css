@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight&family=Inter:wght@300;400;500;700&family=Irish+Grover&family=Josefin+Sans&family=Kavoon&family=Leckerli+One&family=Mulish:wght@500&family=Oleo+Script&family=Playfair+Display&display=swap");
+/* section image */
+.section1 {
+  background-image: url("../imgs/differents-plats-asiatiques-au-restaurant.jpg");
+  background-size: cover;
+  background-position: center; /* Centre l'image horizontalement */
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+}
+.img-div h1 {
+  font-family: Inter;
+
+  font-size: 64px;
+  text-align: center;
+  color: #febd00;
+}
+.img-div {
+  width: 300px;
+  height: 120px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  margin-bottom: 200px;
+}
+/* drop down */
+.active {
+  font-weight: bold;
+}
+.dropdown button {
+  background-color: #febd00;
+  border-color: #febd00;
+  color: #000000;
+}
+.dropdown {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+/* menu section */
+.hidden {
+  display: none;
+}
+.menu-row {
+  display: flex;
+  margin: 50px 40px;
+  justify-content: space-around;
+}
+.plat-div {
+  width: 700px;
+  display: flex;
+  background-color: #febd00;
+}
+
+.plat-div img {
+  border-radius: 42px;
+  margin: 14px 12px;
+}
+.description-div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.description-div button {
+  margin-left: 25%;
+}
+.description-div h3 {
+  text-align: center;
+  font-family: Inter;
+  font-size: 24px;
+}
+.description-div p {
+  font-family: Inter;
+  font-size: 16px;
+  text-align: center;
+  padding-right: 10px;
+}
+.description-div .price {
+  font-weight: bold;
+  font-size: 20px;
+}
+.description-div button {
+  width: 200px;
+  height: 50px;
+  background-color: #d62300;
+  border: none;
+  color: white;
+  font-family: Inter;
+  font-size: 24px;
+}
+.description-div button:hover {
+  background-color: #502314;
+}
+.description-div button:active {
+  border: 4px solid #d62300;
+}
+/* pagination section */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.pagination a {
+  color: #502314;
+}
+.pagination a:hover {
+  color: #d62300;
+}
+/* footer section */
+.footer {
+  background-color: #d62300;
+}
+.social {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  justify-content: space-evenly;
+}
+.social svg {
+  height: 20px;
+}
+.copy {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.fat {
+  display: flex;
+  justify-content: space-around;
+}
+.social {
+  height: 80px;
+}
+.social svg {
+  width: 190px;
+  height: 42px;
+}
+.copy {
+  font-size: x-large;
+}
+.fat {
+  font-size: x-large;
+}
+/* media query */
+@media screen and (max-width: 768px) {
+  .section1 {
+    height: auto; /* Changez la hauteur en automatique pour que le contenu détermine la taille */
+    background-size: contain; /* Ajustez la taille de l'image pour s'adapter à la section */
+    background-position: top;
+
+    background-repeat: no-repeat;
+  }
+  .img-div h1 {
+    margin-top: 90px;
+    font-size: 32px;
+    color: #000000;
+  }
+  .img-div {
+    width: 300px;
+    height: 120px;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 20px;
+    margin-bottom: 200px;
+  }
+}

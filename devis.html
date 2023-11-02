@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/devis.css">
+        <title>WokStar</title>
+</head>
+<body>
+    <!-- ----------------------------------------header-------------------------- -->
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img class="logo" src="LOGO.png" alt="" style="height: 47px;">
+                </a>
+    
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    
+                    <!-- Burger menu -->
+                    <span class="navbar-toggler-icon burger-menu" style="fill: white;" src="assets/images/basket/burger-menu.svg"></span>
+                    <!-- <span class="navbar-toggler-icon burger-menu"></span> -->
+                </button>
+    
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="card.html" aria-disabled="true">Card</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="personalisation.html" aria-disabled="true">Personalization</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="a_propos.html" aria-disabled="true">About</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html" aria-disabled="true">Contact</a>
+                        </li>
+
+                    </ul>
+                </div>
+    
+            </div>
+            <a class="navbar-brand1 header-basket" href="basket.html">
+                <img class="logo" src="assets/images/basket/basket.svg" alt="" style="height: 47px;">
+            </a>
+        </nav>
+    </header>
+    <!-- ----------------------------------------body-------------------------- -->
+
+  <section id="devis">
+    <h1>Devis</h1>
+    <div class="donnees">
+        <div class="donnees-entreprise">
+            <p>WokStar</p>
+            <p>Agadir, Maroc</p>
+            <p>+212645789632</p>
+            <p>wokstar@gmail.com</p>
+        </div>
+        <div class="infos-customer">
+            <p class="parag">Pour Mlle Lamiaa Termoussi</p>
+            <p class="parag" id="date"></p>
+        </div>        
+    </div>
+    <table>
+        <tr>
+            <th>Liste des produits </th>
+            <th>Qté</th>
+            <th>HT</th>
+            <th>TVA</th>
+        </tr>
+        <tr>
+            <td>produits </td>
+            <td>Qté</td>
+            <td>HT</td>
+            <td>TVA</td>
+        </tr>
+        <tr>
+            <td>produits </td>
+            <td>Qté</td>
+            <td>HT</td>
+            <td>TVA</td>
+        </tr>
+        <tr>
+            <td>produits </td>
+            <td>Qté</td>
+            <td>HT</td>
+            <td>TVA</td>
+        </tr>
+        <tr id="add-borders">
+            <td class="no-border-right"> </td>
+            <td class="no-border-left no-border-right"> </td>
+            <td class="no-border-left no-border-right">Total : </td>
+            <td class="no-border-left">250 dh</td>
+        </tr>
+    </table>
+    <div class="buttons no-print">
+        <button onclick="imprimerPage()">Imprimer</button>
+        <button>Checkout</button>
+    </div>
+  </section>  
+
+
+  <script>
+    // Sélectionnez l'élément avec l'ID "date"
+    var dateElement = document.getElementById("date");
+  
+    // Obtenir la date actuelle
+    var currentDate = new Date();
+  
+    // Formatez la date comme vous le souhaitez
+    var options = { year: 'numeric', month: 'long', day: 'numeric' };
+    var formattedDate = currentDate.toLocaleDateString(undefined, options);
+  
+    // Affichez la date dans l'élément HTML
+    dateElement.textContent = "Le : " + formattedDate;
+  </script>
+  
+
+
+  <script>
+    function imprimerPage() {
+        const elementsToHide = document.querySelectorAll('.no-print');
+        elementsToHide.forEach(element => {
+            element.style.display = 'none';
+        });
+        const parag = document.querySelectorAll('.parag');
+        parag.forEach(element => {
+            element.style.fontSize = "15px";
+        });
+
+        // Imprime la page
+        window.print();
+
+        // Rétablit l'affichage initial
+        elementsToHide.forEach(element => {
+            element.style.display = 'block'; // Vous pouvez également utiliser 'initial'
+        });
+        parag.forEach(element => {
+            element.style.fontSize = '20px'; // Vous pouvez également utiliser 'initial'
+        });
+    }
+  </script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>   
+</body>
+</html>

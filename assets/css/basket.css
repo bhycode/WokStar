@@ -1,0 +1,178 @@
+/* Font */
+@font-face {
+    font-family: Inter;
+    src: url("..\\fonts\\Inter.ttf");
+}
+/* Font */
+
+
+body {
+    margin: 0px;
+}
+
+header {
+    height: 100px;
+    background-color: #502314;
+}
+
+
+.large-title {
+    color: #502314;
+    font-size: 1.8rem;
+    margin: 0px;
+    padding: 2%;
+    font-family: Inter;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+
+
+/* Basket items */
+.basket-items-container {
+    display: flex;
+    flex-direction: column;
+    padding-right: 5%;
+}
+
+.basket-item-container {
+    width: 650px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    margin: 2%;
+    border-radius: 2%;
+    background-color: #8403da;
+    box-shadow:  1px 1px 100px rgb(0, 0, 0, 20%);
+}
+
+.basket-item-container img {
+    border-radius: 5px;
+    padding: 2%;
+}
+
+.basket-item-container div {
+    padding: 2%;
+}
+
+.basket-item-container div > p:nth-child(1) {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 2%;
+    font-family: Inter;
+    margin: 0px;
+    margin-bottom: 2%;
+}
+
+.basket-item-container div > p:nth-child(2) {
+    font-size: 1.1rem;
+    padding: 2%;
+    font-family: Inter;
+    margin: 0px;
+    margin-bottom: 2%;
+}
+
+.basket-item-container div > p:nth-child(3) {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 2%;
+    font-family: Inter;
+    margin: 0px;
+    margin-bottom: 2%;
+
+
+}
+
+.basket-item-container div div {
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.basket-item-container div div button {
+
+    background-color: white;
+    height: 50px;
+    width: 50px;
+    color: #502314;
+    font-family: Inter;
+    font-size: 1.2rem;
+    font-weight: bold;
+    align-items: center;
+    margin: 1%;
+    border-radius: 5%;
+}
+/* Basket items */
+
+
+/* Two Bottom Button */
+.after-shopping-section {
+    width: 100%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.after-shopping-section > button:nth-child(1) {
+    width: 25%;
+    padding: 2%;
+    color: white;
+    font-family: Inter;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    margin: 1%;
+    background-color: #5dda03;
+    box-shadow: 1px 1px 100px rgb(0, 0, 0, 20%);
+}
+.after-shopping-section > button:nth-child(1):hover {
+    background-color: rgb(92, 216, 3, 50%);
+}
+.after-shopping-section > button:nth-child(1):active {
+    background-color: #5cd803;
+}
+
+.after-shopping-section > button:nth-child(2) {
+    width: 25%;
+    padding: 2%;
+    color: white;
+    font-family: Inter;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    margin: 1%;
+    background-color: #502314;
+    box-shadow: 1px 1px 100px rgb(0, 0, 0, 20%);
+}
+.after-shopping-section > button:nth-child(2):hover {
+    background-color: rgb(99, 69, 33, 50%);
+}
+.after-shopping-section > button:nth-child(2):active {
+    background-color: #634521;
+}
+/* Two Bottom Button */
+
+
+
+
+@media screen and (max-width: 768px) {
+    body {
+        background-color: blue;
+    }
+
+    html {
+        font-size: 12px;
+    }
+}

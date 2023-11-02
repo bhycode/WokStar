@@ -1,0 +1,362 @@
+body{
+    overflow-x: hidden;
+}
+
+
+.container-contact{
+	position: relative;
+    left: 100px;
+	width: 1000px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 200px 100px;
+
+    
+}
+
+.container-contact:after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: url("img/bg.jpg") no-repeat center;
+	background-size: cover;
+	filter: blur(50px);
+	z-index: -2;
+}
+.contact-box{
+    padding: 0px 0px;
+	max-width: 850px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: #fff;
+	box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
+}
+
+.left-contact{
+	background: url("IMAGE4/img100.jfif") no-repeat center;
+	background-size: cover;
+	height: 100%;
+}
+.left-contact h4{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 20px;
+}
+.left-contact h3{
+    color: rgb(254, 254, 254);
+    text-align: center;
+    font-size: 30px;
+}
+.left-contact h2{
+    color: rgb(254, 254, 254);
+    text-align: center;
+    font-size: 31px;
+}
+.left-contact p{
+    color: rgba(254, 189, 0, 1);
+    text-align: center;
+    font-size: 20px;
+}
+
+.right{
+	padding: 25px 40px;
+}
+
+h2{
+	position: relative;
+	padding: 10px 10px 17px;
+	margin-bottom: 10px;
+}
+
+h2:after{
+	content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 4px;
+    width:100px;
+    border-radius: 3px;
+    background-color: rgba(254, 189, 0, 1);
+}
+.right-contact p{
+    text-align: left;
+    padding: 0px 30px;
+    font-weight: bold;
+    width: 300px;
+}
+.field{
+
+	border: 2px solid rgba(0, 0, 0, 0);
+	outline: none;
+	background-color: rgba(230, 230, 230, 0.6);
+	padding: 0.5rem 1rem;
+	font-size: 1.1rem;
+	margin-bottom: 22px;
+	transition: .3s;
+}
+
+.field:hover{
+	background-color: rgba(201, 33, 33, 0.1);
+}
+
+textarea{
+	min-height: 150px;
+}
+
+
+.right-contact textarea{
+    margin-top: 40px;
+    margin-left: 2px;
+    left: 10px;
+    height: 20px;
+    width: 90%;
+}
+.right-contact a{
+    font-weight: 700;
+    border-radius: 20px;
+    padding: 6px 30px;
+    color: aliceblue;
+    background-color: rgba(254, 189, 0, 1);
+    position: relative;
+    left: 100px;
+}
+.btn:hover{
+    background-color: #27ae60;
+}
+
+.field:focus{
+    border: 2px solid rgba(254, 189, 0, 1);
+    background-color: #fff;
+}
+
+
+
+
+
+
+
+
+
+.button{
+    width: 50%;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.button button{
+    width: 50%;
+    padding: 10px;
+    font-size: 20px;
+    color: #fff;
+    background-color: #f187c6;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+	align-items: center;
+}
+
+.message{
+    width: 100%;
+    position: relative;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+}
+.message .success{
+    font-size: 20px;
+    color: green;
+    position: absolute;
+    animation: buttons .3s linear;
+    display: none;
+}
+.message .danger{
+    font-size: 20px;
+    color: red;
+    position: absolute;
+	
+	text-align: center;
+    transition: .3s;
+    animation: buttons .3s linear;
+    display: none;
+}
+
+
+
+@media screen and (max-width: 880px){
+	.contact-box{
+		grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
+        margin-left: -43px;
+	}
+	.left-contact{
+		height: 500px;
+        width: 400px;
+	}
+
+    .map{
+        position: relative;
+        right: 190px;
+        width: 500px;
+        
+      } 
+
+      .container-contact{
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        justify-content: flex-start;
+      }
+}
+@media screen and (max-width: 700px){
+	.contact-box{
+		grid-template-columns: 1fr;
+        margin-left: -80px;
+	}
+}
+@media screen and (max-width: 600px){
+	.contact-box{
+		grid-template-columns: 1fr;
+        margin-left: -120px;
+	}
+}
+
+/* *MAP */
+.map {
+    margin: 60px auto;
+    position: relative;
+    left: 400px;
+    right:10px ;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+   
+
+    
+  }
+
+
+
+
+
+
+  
+@media screen and (max-width: 700px) {
+    .wrapper {
+      
+      position: relative;
+      width: 70%;
+      left: 15%;
+    }
+   
+  
+  }
+
+
+
+
+  #name.field{
+    width: 200px;
+    border: 2px solid rgba(219, 216, 52, 0);
+	outline: none;
+	background-color: rgba(230, 230, 230, 0.6);
+	padding: 0.5rem 1rem;
+	font-size: 1.1rem;
+	margin-bottom: 22px;
+	transition: .3s;
+    border-radius: 30px;
+  }
+
+  #email.field{
+    width: 200px;
+    border: 2px solid rgba(219, 216, 52, 0);
+	outline: none;
+	background-color: rgba(230, 230, 230, 0.6);
+	padding: 0.5rem 1rem;
+	font-size: 1.1rem;
+	margin-bottom: 22px;
+	transition: .3s;
+    border-radius: 30px;
+  }
+
+  #msg.field{
+    width: 200px;
+    height: 100px;
+    border: 2px solid rgba(219, 216, 52, 0);
+	outline: none;
+	background-color: rgba(230, 230, 230, 0.6);
+	padding: 0.5rem 1rem;
+	font-size: 1.1rem;
+	margin-bottom: 22px;
+	transition: .3s;
+    border-radius: 30px;
+  }
+
+  #pass.field{
+    width: 200px;
+    border: 2px solid rgba(219, 216, 52, 0);
+	outline: none;
+	background-color: rgba(230, 230, 230, 0.6);
+	padding: 0.5rem 1rem;
+	font-size: 1.1rem;
+	margin-bottom: 22px;
+	transition: .3s;
+    border-radius: 30px;
+  }
+
+
+  /* *FOOTER */
+  .footer{
+    background-color: #D62300;
+
+}
+.social{
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    justify-content: space-evenly;
+}
+.social svg {
+    height: 20px;
+}
+.copy{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.fat{
+    display: flex;
+    justify-content: space-around;
+}
+.social{
+        height: 80px;
+      }
+    .social svg {
+        width: 190px;
+        height: 42px;
+        }
+    .copy{
+        font-size: x-large;
+    }
+    .fat{
+        font-size: x-large;
+    } 
+
+
+
+    /* *ANIMATION */
+    
+
+   
+  
+      

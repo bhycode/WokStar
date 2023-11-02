@@ -9,6 +9,8 @@
     <meta charset="UTF-8">
 
     <link rel="stylesheet" href="assets/css/index.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 
 
@@ -17,27 +19,52 @@
 
 
     <!--HEADER-->
-    <header style="height: 121px; background-color: #502314; margin: 0px;">
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img class="logo" src="LOGO.png" alt="" style="height: 47px;">
+                </a>
+    
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    
+                    <!-- Burger menu -->
+                    <span class="navbar-toggler-icon burger-menu" style="fill: white;" src="assets/images/basket/burger-menu.svg"></span>
+                    <!-- <span class="navbar-toggler-icon burger-menu"></span> -->
+                </button>
+    
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
 
-        <div>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
 
-        </div>
+                        <li class="nav-item">
+                            <a class="nav-link" href="card.html" aria-disabled="true">Card</a>
+                        </li>
 
+                        <li class="nav-item">
+                            <a class="nav-link" href="personalisation.html" aria-disabled="true">Personalization</a>
+                        </li>
 
-        <div>
+                        <li class="nav-item">
+                            <a class="nav-link" href="a_propos.html" aria-disabled="true">About</a>
+                        </li>
 
-        </div>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html" aria-disabled="true">Contact</a>
+                        </li>
 
-
-        <!-- <nav>
-        <p>Home</p>
-        <p>Card</p>
-        <p>Personalization</p>
-        <p>About</p>
-        <p>Contact</p>
-        </nav> -->
-
-
+                    </ul>
+                </div>
+    
+            </div>
+            <a class="navbar-brand1 header-basket" href="basket.html">
+                <img class="logo" src="assets/images/basket/basket.svg" alt="" style="height: 47px;">
+            </a>
+        </nav>
     </header>
     <!--HEADER-->
 
@@ -63,6 +90,41 @@
 
 
 
+    
+    <!-- Introducing section -->
+    <section class="home-introducing-section">
+        <p>"Let our plates be your passport to Asian delight."</p>
+        <img id="plate1" src="assets/images/index/plate1.svg">
+        <img id="plate2" src="assets/images/index/plate2.svg">
+        <img id="plate3" src="assets/images/index/plate3.svg">
+    </section>
+    <!-- Introducing section -->
+
+
+
+
+
+    <!-- Food types -->
+    <section class="types-food-section">
+
+        <div>
+            <img src="assets/images/index/type-sea-food.svg">
+            <p>SEA FOOD</p>
+        </div>
+
+        <div>
+            <img src="assets/images/index/type-vegetables.svg">
+            <p>VEGETABLES</p>
+        </div>
+
+        <div>
+            <img src="assets/images/index/type-pasta.svg">
+            <p>RICE & PASTA</p>
+        </div>
+
+
+    </section>
+    <!-- Food types -->
 
 
 
