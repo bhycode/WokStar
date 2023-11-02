@@ -29,8 +29,7 @@ header .active {
 .total-div{
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+    justify-content: space-evenly;
     margin: 5% 2%;
 }
 
@@ -45,7 +44,7 @@ header .active {
     background-position: left;
 }
 .text{
-    margin-left: 2%;
+    margin-left: 4rem;
     width: 35%;
     /* margin-bottom: 8%; */
 }
@@ -97,6 +96,10 @@ header .active {
     grid-template-columns: repeat(6,1fr);
     grid-template-rows: repeat(4,0.6fr);
     gap: 20px 25px;
+}
+
+.galerie-container p{
+    text-align: center;
 }
 
 .item1{
@@ -166,12 +169,184 @@ header .active {
     grid-row: 4/6;
     grid-column:  8/11;
 }
-/* .partener6{
-    grid-row: 4/6;
-    grid-column:  8/9;
-} */
 
 .partenaires img{
     width: 200px;
-    height: 100px;
+    height: 80px;
 }
+
+@media screen and (max-width:  1020px){
+    .total-div{
+        margin: 7% 3%;
+        justify-content: space-evenly;
+    }
+    .image{
+        width: 30vw;
+    }
+    .image img{
+        width: 35vw;
+        height: 450px;
+    }
+}
+@media screen and (max-width:  1180px){
+    .galerie-container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(4,0.6fr);
+        gap: 20px 25px;
+    }
+}
+@media screen and (max-width:  1020px){
+    .text{
+        margin-left: 3rem;
+    }
+    .text h1{
+        font-size: 30px;
+    }
+    .text svg{
+        width: 25px;
+    }
+    .text p{
+        font-size: 16px;
+    }
+    .location p{
+        font-size: 12px;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+    .galerie-container{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(5,0.6fr);
+        gap: 20px 25px;
+        justify-content: center;
+    }
+    .item1{
+        grid-column: 1/1;
+        grid-row: 1/2;
+    }
+    .item2{
+        grid-row: 2/3;
+        grid-column: 1/1;
+    }
+    .item3{
+        grid-column: 1/1;
+        grid-row: 3/4;
+    }
+    .item4{
+        grid-column: 1/1;
+        grid-row: 4/5;
+    }
+
+    .item1 img,.item4 img,.item2 img,.item3 img{
+        size: cover;
+        width: 450px;
+        height: 450px;
+    }
+    
+    .partenaires img{
+        width: 100px;
+        height: 50px;
+    }
+} 
+@media screen and (max-width:  650px){
+    .image{
+        display: none;    
+    }
+    .text{
+        margin-top: 20px;
+        width: 63%;
+    }
+    .text h1{
+        font-size: 25px;
+        margin-bottom: 25px;
+    }
+    .text svg{
+        width: 30px;
+    }
+    .text p{
+        font-size: 15px;
+    }
+    .location p{
+        font-size: 12px;
+    }
+    .item1 img,.item4 img,.item2 img,.item3 img{
+        size: cover;
+        width: 420px;
+        height: 360px;
+    }
+}
+@media screen and (max-width:  465px){
+    .text{
+        margin-top: 20px;
+        width: 67%;
+    }
+    .text h1{
+        font-size: 22px;
+        margin-bottom: 21px;
+    }
+    .text svg{
+        width: 25px;
+    }
+    .text p{
+        font-size: 15px;
+    }
+    .location p{
+        font-size: 12px;
+    }
+    .item1 img,.item4 img,.item2 img,.item3 img{
+        size: cover;
+        width: 320px;
+        height: 
+        260px;
+    }
+    .partenaires img{
+        width: 80px;
+        height: 30px;
+    }
+}
+@media screen and (max-width:  280px){
+    .text{
+        margin-top: 20px;
+        width: 60%;
+        margin-left: 17px;
+    }
+    .text h1{
+        font-size: 17px;
+        margin-bottom: 16px;
+    }
+    .text svg{
+        width: 25px;
+    }
+    .text p{
+        font-size: 10px;
+        margin-bottom: 7px;
+    }
+    .location p{
+        font-size: 7px;
+    }
+    .item1 img,.item4 img,.item2 img,.item3 img{
+        size: cover;
+        width: 200px;
+        height: 160px;
+    }
+
+    .history {
+        margin-top: 40px;
+    }
+    body h2{
+        font-size: 17px;
+    }
+    .partenaires img{
+        width: 50px;
+        height: 30px;
+    }
+    .partenaires{
+        gap: 12px 0px;
+        margin-bottom: 50px;
+    }
+    .galerie-container p{
+        font-size: 12px;
+    }
+}
+
