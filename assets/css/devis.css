@@ -107,6 +107,6 @@ table tr td {
 
   /* Masquez l'en-tête et le pied de page */
   @page {
-    margin: 0.5cm 0.5cm 0cm 0.5cm; /* Ajustez les marges si nécessaire */
+    margin: 0.5cm 0.5cm 0.5cm 0.5cm; /* Ajustez les marges si nécessaire */
   }
 }
