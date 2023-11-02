@@ -49,6 +49,8 @@ header {
 }
 
 .basket-item-container img {
+    width: 90%;
+    height: 90%;
     border-radius: 5px;
     padding: 2%;
 }
@@ -191,8 +193,8 @@ header {
         margin: 2% 0;
     }
     .basket-item-container img {
-        width: 500px;
-        height: 500px;
+        width: 80px;
+        height: 80px;
         padding: 1%;
     }
     .basket-item-container div {
