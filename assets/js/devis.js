@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 // const food_items_list=[
 //     {
 //         id:1,
@@ -141,7 +142,6 @@
 //         price:55
 //     },
 
-// ]
 
 // Get data from the basket
 const food_items_list = JSON.parse(localStorage.getItem('foodItems'));
@@ -149,22 +149,36 @@ const food_items_list = JSON.parse(localStorage.getItem('foodItems'));
 var table = document.getElementById("table");
 
 // itemContainer.classList.add("basket-item-container");
-
+var total = 0
 food_items_list.forEach((plate) => {
     var itemContainer = document.createElement("tr");
+    total += plate.price
+    ht = plate.price/(1+20/100)
+    tva = plate.price - ht
 
     itemContainer.innerHTML = `
     <tr>
         <td>${plate.title}</td>
         <td>${plate.id}</td>
-        <td>${plate.price}</td>
+        <td>${ht.toFixed(2)}</td>
         <td>${plate.price}</td>
     </tr>
     `;
     table.appendChild(itemContainer);
 });
 
-function addButton(id) {
-    document.getElementById(`items-number${i}`).textContent = parseInt(document.getElementById(`items-number${i}`)) + 1;
-}
+
+var itemContainer = document.createElement("tr");
+// itemContainer.className.add("item-container");
+
+itemContainer.innerHTML = `
+    <td class="no-border-right"> </td>
+    <td class="no-border-left no-border-right"> </td>
+    <td class="no-border-left no-border-right">Total : </td>
+    <td class="no-border-left">${total} dh</td>
+`;
+table.appendChild(itemContainer);
+
+
+
  

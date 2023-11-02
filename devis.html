@@ -61,54 +61,32 @@
     <!-- ----------------------------------------body-------------------------- -->
 
   <section id="devis">
-    <h1>Devis</h1>
-    <div class="donnees">
-        <div class="donnees-entreprise">
-            <p>WokStar</p>
-            <p>Agadir, Maroc</p>
-            <p>+212645789632</p>
-            <p>wokstar@gmail.com</p>
+    <div id="devis-content">
+        <h1>Devis</h1>
+        <div class="donnees">
+            <div class="donnees-entreprise">
+                <p>WokStar</p>
+                <p>Agadir, Maroc</p>
+                <p>+212645789632</p>
+                <p>wokstar@gmail.com</p>
+            </div>
+            <div class="infos-customer">
+                <p class="parag">Pour Mlle Lamiaa Termoussi</p>
+                <p class="parag" id="date"></p>
+            </div>        
         </div>
-        <div class="infos-customer">
-            <p class="parag">Pour Mlle Lamiaa Termoussi</p>
-            <p class="parag" id="date"></p>
-        </div>        
+        <table id="table">
+            <tr>
+                <th>Liste des produits </th>
+                <th>Qté</th>
+                <th>HT</th>
+                <th>TVA</th>
+            </tr>
+        </table>
     </div>
-    <table id="table">
-        <tr>
-            <th>Liste des produits </th>
-            <th>Qté</th>
-            <th>HT</th>
-            <th>TVA</th>
-        </tr>
-        <!-- <tr class="product">
-            <td>produits </td>
-            <td>Qté</td>
-            <td>HT</td>
-            <td>TVA</td>
-        </tr>
-        <tr class="product">
-            <td>produits </td>
-            <td>Qté</td>
-            <td>HT</td>
-            <td>TVA</td>
-        </tr>
-        <tr class="product">
-            <td>produits </td>
-            <td>Qté</td>
-            <td>HT</td>
-            <td>TVA</td>
-        </tr> -->
-        <tr id="add-borders">
-            <td class="no-border-right"> </td>
-            <td class="no-border-left no-border-right"> </td>
-            <td class="no-border-left no-border-right">Total : </td>
-            <td class="no-border-left">250 dh</td>
-        </tr>
-    </table>
     <div class="buttons no-print">
         <button onclick="imprimerPage()">Imprimer</button>
-        <button>Checkout</button>
+        <button onclick="clear_basket()">Checkout</button>
     </div>
   </section>  
 
@@ -151,6 +129,14 @@
         parag.forEach(element => {
             element.style.fontSize = '20px'; // Vous pouvez également utiliser 'initial'
         });
+    }
+  </script>
+
+  <script>
+    function clear_basket(){
+        console.log("clear_basket function called");
+        const devis = document.getElementById('devis-content')
+        devis.classList.add("none")
     }
   </script>
   <script src="assets/js/devis.js"></script>
