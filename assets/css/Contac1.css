@@ -12,7 +12,6 @@ body{
 	justify-content: center;
 	align-items: center;
 	padding: 200px 100px;
-
     
 }
 
@@ -41,7 +40,7 @@ body{
 }
 
 .left-contact{
-	background: url("IMAGE4/img100.jfif") no-repeat center;
+	background: url("..\\images\\IMAGE4\\img100.jpg") no-repeat center;
 	background-size: cover;
 	height: 100%;
 }
