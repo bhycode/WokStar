@@ -69,99 +69,43 @@ const food_items_list=[
         title:"Baozi",
         description:"Steamed buns filled with pork, chicken, vegetables, and other ingredients.",
         price:60
-    },
-    {
-        id:11,
-        image:"assets/imgs/Crevettes grillées.jpeg",
-        title:"Grilled shrimp",
-        description:"Flame-grilled shrimp seasoned with salt and pepper.",
-        price:75
-    },
-    {
-        id:12,
-        image:"assets/imgs/-Calamars frits.jpeg ",
-        title:"Fried squid",
-        description:"Rings of squid coated with batter and fried.",
-        price:55
-    },
-    {
-        id:13,
-        image:"assets/imgs/Kimchi.jpg",
-        title:"Kimchi",
-        description:"Spicy fermented Chinese cabbage.",
-        price:40
-    },
-    {
-        id:14,
-        image:"assets/imgs/Feuilles de vigne farcies.webp ",
-        title:"Stuffed grape leaves",
-        description:"grape leaves filled with rice, meat, and herbs.",
-        price:70
-    },
-    {
-        id:15,
-        image:"assets/imgs/Poulet au curry.jpg",
-        title:"Chicken Curry",
-        description:"A spicy chicken dish, served with rice or noodles.",
-        price:69
-    },
-    {
-        id:16,
-        image:"assets/imgs/Poulet à l'orange.jpg",
-        title:"Orange Chicken",
-        description:"made of breaded chicken pieces served with a sweet and tangy orange sauce.",
-        price:59
-    },
-    {
-        id:17,
-        image:"assets/imgs/Bœuf au brocoli.webp",
-        title:"Beef with Broccoli",
-        description:"classic Chinese preparation that combines slices of beef, broccoli florets, and soy sauce.",
-        price:75
-    },
-    {
-        id:18,
-        image:"assets/imgs/Pad thai.jpg",
-        title:"Pad thai",
-        description:"consists of stir-fried rice noodles with vegetables, tofu, shrimp, or other proteins, all seasoned with a tamarind-based sauce.",
-        price:55
-    },
-    {
-        id:19,
-        image:"assets/imgs/Riz frit.jpg",
-        title:"Fried Rice",
-        description:"sauteed rice with various ingredients, such as vegetables, chicken,or shrimp.",
-        price:55
-    },
-    {
-        id:20,
-        image:"assets/imgs/-Nouilles sautées.jpg",
-        title:"Stir-fried noodles",
-        description:"Stir-fried noodles with vegetables and various proteins.",
-        price:55
-    },
+    }
 
 ]
 
 var table = document.getElementById("table");
 
 // itemContainer.classList.add("basket-item-container");
-
+var total = 0
 food_items_list.forEach((plate) => {
     var itemContainer = document.createElement("tr");
+    total += plate.price
+    ht = plate.price/(1+20/100)
+    tva = plate.price - ht
 
     itemContainer.innerHTML = `
     <tr>
         <td>${plate.title}</td>
         <td>${plate.id}</td>
-        <td>${plate.price}</td>
+        <td>${ht.toFixed(2)}</td>
         <td>${plate.price}</td>
     </tr>
     `;
     table.appendChild(itemContainer);
 });
 
-function addButton(id) {
-    document.getElementById(`items-number${i}`).textContent = parseInt(document.getElementById(`items-number${i}`)) + 1;
-}
+
+var itemContainer = document.createElement("tr");
+// itemContainer.className.add("item-container");
+
+itemContainer.innerHTML = `
+    <td class="no-border-right"> </td>
+    <td class="no-border-left no-border-right"> </td>
+    <td class="no-border-left no-border-right">Total : </td>
+    <td class="no-border-left">${total} dh</td>
+`;
+table.appendChild(itemContainer);
+
+
+
  
