@@ -198,65 +198,209 @@ header .active {
 
 
 
+@media screen and (max-width: 1350px) {
+    header {
+        background-color: blue;
+    }
+
+    #plate1 {
+        top: 600px;
+    }
+
+}
+
+@media screen and (max-width: 1000px) {
+    header {
+        background-color: orange;
+    }
+
+    #plate1 {
+        top: 620px;
+    }
+
+/* Food types */
+.types-food-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #FEBD00;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+}
+
+.types-food-section div {
+    text-align: center;
+    flex: 1 0 200px;
+    margin: 20px;
+}
+
+.types-food-section img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+}
+
+.types-food-section p {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+}
 
 @media screen and (max-width: 768px) {
     header {
-        margin-bottom: 50px !important;
+        background-color: pink !important;
     }
 
-    .home-welcome-section {
-        flex-direction: column;
-        padding-top: 50px;
+    body {
+        margin: 0;
+        font-family: 'Inter', sans-serif;
     }
-
-    .home-welcome-img-container {
+    
+    /* HEADER */
+    header {
+        background-color: #502314;
+        color: white;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
         width: 100%;
-        padding: 0;
+        z-index: 1000;
+    }
+    
+    .navbar-nav {
+        display: flex;
+        gap: 20px;
+    }
+    
+    .navbar-nav a {
+        color: white !important;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+    
+    .navbar-nav a:hover {
+        color: #FEBD00 !important;
+    }
+    
+    .header-basket {
+        fill: white !important;
+        width: 24px;
+        height: 24px;
+    }
+    
+    /* Welcome section */
+    .home-welcome-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #FEBD00;
+        padding: 80px 20px;
         text-align: center;
     }
-
+    
+    .home-welcome-p {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    
     .home-welcome-img {
-        width: 80%;
-        max-width: 300px;
+        width: 100%;
+        max-width: 400px;
         height: auto;
     }
-
-    .home-welcome-p-container {
-        width: 100%;
-        padding: 0 20px;
-    }
-
-    .home-welcome-p {
-        font-size: 2.5rem;
+    
+    /* Introducing section */
+    .home-introducing-section {
         text-align: center;
-        padding: 10px 0;
+        background-color: #502314;
+        color: white;
+        padding: 80px 20px;
     }
-
+    
     .home-introducing-section p {
-        width: 80%;
-        text-align: center;
-        font-size: 2rem;
+        font-size: 1.8rem;
+        font-weight: bold;
+        margin-bottom: 30px;
     }
-
+    
     #plate1,
     #plate2,
     #plate3 {
-        width: 70%;
-        left: 15%;
-    }
-
-    .types-food-section div {
-        width: 80%;
-        margin: 5%;
-        text-align: center;
-    }
-
-    .types-food-section img {
         width: 100%;
         max-width: 200px;
+        margin: 0 auto;
+        display: block;
     }
-
+    
+    /* Food types */
+    .types-food-section {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #FEBD00;
+        padding: 40px 20px;
+        flex-wrap: wrap;
+    }
+    
+    .types-food-section div {
+        text-align: center;
+        flex: 1 0 200px;
+        margin: 20px;
+    }
+    
+    .types-food-section img {
+        width: 100%;
+        max-width: 150px;
+        height: auto;
+    }
+    
     .types-food-section p {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
+        font-weight: bold;
+        margin-top: 10px;
     }
+    
+    /* Media Queries */
+    @media screen and (max-width: 768px) {
+        .home-welcome-p {
+            font-size: 1.5rem;
+        }
+    
+        .home-introducing-section p {
+            font-size: 1.5rem;
+        }
+    
+        .types-food-section div {
+            flex: 1 0 150px;
+        }
+    
+        .types-food-section p {
+            font-size: 1.4rem;
+        }
+    }
+    
+    @media screen and (max-width: 480px) {
+        .home-welcome-p {
+            font-size: 1.2rem;
+        }
+    
+        .home-introducing-section p {
+            font-size: 1.3rem;
+        }
+    
+        .types-food-section div {
+            flex: 1 0 120px;
+        }
+    
+        .types-food-section p {
+            font-size: 1.2rem;
+        }
+    }
+    
 }
