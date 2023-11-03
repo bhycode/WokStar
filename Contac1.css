@@ -41,7 +41,7 @@ body{
 }
 
 .left-contact{
-	background: url("../images/IMAGE4/img100.jpg") no-repeat center;
+	background: url("..\images\IMAGE4\img100.jpg") no-repeat center;
 	background-size: cover;
 	height: 100%;
 }
