@@ -78,10 +78,16 @@ table.appendChild(itemContainer);
 
 
 
-//---------------------------------vider le panier oncklic sur le button checkout :--------------------
+//---------------------------------vider le panier et afficher message oncklic sur le button checkout :--------------------
+
+    const div = document.getElementById('message')
 
     function clear_basket(){
-        localStorage.removeItem('foodItems')
+        localStorage.removeItem('foodItems');
+        // location.reload();
+        const text = document.createElement('p');
+        text.innerHTML ="Meci, votre commande est validée";
+        div.appendChild(text);
     }
 
 

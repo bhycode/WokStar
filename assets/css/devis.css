@@ -120,6 +120,20 @@ table tr td {
     display: none;
 }
 
+/* --------------------message-style----------------------- */
+
+#message{
+    width: 60%;
+    background-color: rgb(174, 210, 174);
+    text-align: center;
+    margin-top: 10%;
+}
+#message p{
+    margin-top:2%;
+}
+
+
+
 @media print {
   @page {
     size: auto; /* Définissez la taille de la page */
