@@ -16,7 +16,7 @@
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      
+
       <span class="navbar-toggler-icon "></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
@@ -28,15 +28,11 @@
           <a class="nav-link" href="#">Features</a>
         </li>
         <li class="nav-item">
-          
         </li>
         <li class="nav-item">
           <a class="nav-link disabled" aria-disabled="true">Disabled</a>
         </li>
-
       </ul>
-      
-
     </div>
    
   </div>
@@ -44,19 +40,18 @@
 </nav>
     </header>
     <h1 class="title ">PERSONALIZATION</h1>
-    <section class="personalization" id="border1">
-    <p class="tiltlebord">name of food</p>
-    <img class="pizza" src="assets/images/personalization/">
-    <div class="descrip">
-    <p  class="text-brown fs-" style="color: brown; font-family: monospace;">description:</p>
-    <p  class="text-danger d-flex justify-content-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, animi voluptatem nostrum quod quos harum officia nam quaerat accusamus optio quidem enim, neque in. Animi optio reprehenderit fugit deleniti quasi!</p>
-  </div>
-  <div class="element">
-    <p>Souces: </p>
-    <p>Number:</p>
-    <p>Price:</p>
-  </div>
-  </section>
+    <section class="personalization" id="border">
+      <div class="plat-div-d">
+        <img src="" alt="" width="280" height="320" />
+        <div class="description-div">
+          <h3 id="title1"></h3>
+          <p id="description1"></p>
+          <p class="price" id="price1"></p>
+        </div>
+      </div>
+ 
+    </section>
+
 
   <section class="adding">
     <p>Customize Your Plate</p>
@@ -86,10 +81,14 @@
             <option value="Tsukemono" data-price="20">Tsukemono <span>20 DH</span></option>
             <option value="Yuzu" data-price="30">Yuzu <span>30 DH</span></option>
             <option value="Seaweed" data-price="35">Seaweed <span>35 DH</span></option>
+            <option value="Matcha" data-price="15">Matcha <span>15 DH</span></option>
+            <option value="Sake" data-price="25">Sake <span>25 DH</span></option>
+            <option value="Tsukemono" data-price="20">Tsukemono <span>20 DH</span></option>
+            <option value="Yuzu" data-price="30">Yuzu <span>30 DH</span></option>
+            <option value="Seaweed" data-price="35">Seaweed <span>35 DH</span></option>
         </select>
     </div>
     <button class="boton" onclick="calculateTotalPrice()">Add to Plate</button>
-    <p>Total Price: <span id="totalPrice">0</span> DH</p>
 </section>
   <div>
     <button class="buy" onclick="clickcounter()" id="dataInput" data-div-id="border1">BUY NOW</button>
@@ -118,5 +117,62 @@
   </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="assets/js/hamza.js"></script>
+    <script>
+            // Retrieve personalized plate data from localStorage
+            const personalizedPlateData = localStorage.getItem("personalizedPlate");
+
+// Parse the JSON string back to an object
+const personalizedPlate = JSON.parse(personalizedPlateData);
+
+// Get elements by their IDs
+const titleElement = document.getElementById("title1");
+const descriptionElement = document.getElementById("description1");
+const priceElement = document.getElementById("price1");
+const imageElement = document.querySelector(".plat-div-d img");
+
+// Check if elements exist before populating
+if (
+  personalizedPlate &&
+  titleElement &&
+  descriptionElement &&
+  priceElement &&
+  imageElement
+) {
+  // Populate the elements with personalized plate data
+  titleElement.textContent = personalizedPlate.title;
+  descriptionElement.textContent = personalizedPlate.description;
+  priceElement.textContent = personalizedPlate.price;
+  imageElement.src = personalizedPlate.imageSrc;
+}
+
+function calculateTotalPrice() {
+    // Get selected values from the dropdowns
+    const selectedSauce = document.getElementById("souceInput").value;
+    const selectedSize = document.getElementById("sizeInput").value;
+    const selectedExtra = document.getElementById("extraInput").value;
+
+    // Get the prices of the selected items
+    const saucePrice = parseInt(document.getElementById("souceInput").options[document.getElementById("souceInput").selectedIndex].getAttribute("data-price"));
+    const sizePrice = parseInt(document.getElementById("sizeInput").options[document.getElementById("sizeInput").selectedIndex].getAttribute("data-price"));
+    const extraPrice = parseInt(document.getElementById("extraInput").options[document.getElementById("extraInput").selectedIndex].getAttribute("data-price"));
+
+    // Calculate the total price
+    const totalPrice = saucePrice + sizePrice + extraPrice;
+
+    // Create new elements to append
+    const description = document.createElement("p");
+    description.textContent = `Sauce: ${selectedSauce}, Size: ${selectedSize}, Extra: ${selectedExtra}`;
+
+    const price = document.createElement("p");
+    price.textContent = `Total Price: ${totalPrice} DH`;
+
+    // Append the new content to the existing section
+    const descriptionDiv = document.querySelector(".plat-div-d .description-div");
+    descriptionDiv.appendChild(description);
+    descriptionDiv.appendChild(price);
+}
+
+
+    </script>
 </body>
 </html>
