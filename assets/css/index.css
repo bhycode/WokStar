@@ -195,3 +195,68 @@ header .active {
     text-align: center;
 }
 /* Food types */
+
+
+
+
+@media screen and (max-width: 768px) {
+    header {
+        margin-bottom: 50px !important;
+    }
+
+    .home-welcome-section {
+        flex-direction: column;
+        padding-top: 50px;
+    }
+
+    .home-welcome-img-container {
+        width: 100%;
+        padding: 0;
+        text-align: center;
+    }
+
+    .home-welcome-img {
+        width: 80%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    .home-welcome-p-container {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .home-welcome-p {
+        font-size: 2.5rem;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .home-introducing-section p {
+        width: 80%;
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    #plate1,
+    #plate2,
+    #plate3 {
+        width: 70%;
+        left: 15%;
+    }
+
+    .types-food-section div {
+        width: 80%;
+        margin: 5%;
+        text-align: center;
+    }
+
+    .types-food-section img {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .types-food-section p {
+        font-size: 1.8rem;
+    }
+}

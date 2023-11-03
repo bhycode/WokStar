@@ -1,89 +1,201 @@
-// let items_number = document.getElementById("items-number");
-// let add_item = document.getElementById("add-item");
-// let remove_item = document.getElementById("remove-item");
+
+const foodItemsList = [
+    {
+        id: 1,
+        image: "assets/images/index/type-pasta.svg",
+        title: "Asian Salads+++++",
+        description: "Fresh salads with ingredients such as grilled chicken, sliced beef, tofu, crisp vegetables, and various dressings.",
+        price: 69,
+        quantity: 10,
+        customized: false,
+        sauce: null,
+        size: null,
+        extra_items: null
+    },
+    {
+        id: 2,
+        image: "assets/images/index/type-pasta.svg",
+        title: "Spring Rolls",
+        description: "These fresh rolls are made with thin rice wrappers filled with fresh vegetables, shrimp, chicken, or tofu.",
+        price: 72,
+        quantity: 8,
+        customized: false,
+        sauce: null,
+        size: null,
+        extra_items: null,
+    },
+    {
+        id: 3,
+        image: "assets/images/index/type-pasta.svg",
+        title: "Dumplings",
+        description: "Small pockets of dough filled with meat (pork, chicken, beef) or vegetables.",
+        price: 90,
+        quantity: 15,
+        customized: false,
+        sauce: null,
+        size: null,
+        extra_items: null,
+    },
+    {
+        id: 4,
+        image: "assets/images/index/type-pasta.svg",
+        title: "Samosas",
+        description: "Triangles of pastry filled with potatoes, vegetables, and meat.",
+        price: 69,
+        quantity: 12,
+        customized: false,
+        sauce: null,
+        size: null,
+        extra_items: null,
+    },
+    {
+        id: 5,
+        image: "assets/images/index/type-pasta.svg",
+        title: "Tempura",
+        description: "Consisting of shrimp, vegetables, or other ingredients fried in a light and crispy batter.",
+        price: 44,
+        quantity: 20,
+        customized: false,
+        sauce: null,
+        size: null,
+        extra_items: null,
+    },
+    {
+        id: 6,
+        image: "assets/images/index/type-pasta.svg",
+        title: "Miso Soup",
+        description: "Made from fermented soybean paste (miso), tofu, seaweed, and sometimes other ingredients like mushrooms or green onions.",
+        price: 69,
+        quantity: 18,
+        customized: false,
+        sauce: null,
+        size: null,
+        extra_items: null,
+    },
+    {
+        id: 7,
+        image: "assets/images/index/type-pasta.svg",
+        title: "Nems",
+        description: "Spring rolls fried, filled with minced meat, shrimp, vegetables, and rice vermicelli.",
+        price: 42,
+        quantity: 25,
+        customized: false,
+        sauce: null,
+        size: null,
+        extra_items: null,
+    },
+    {
+        id: 8,
+        image: "assets/images/index/type-pasta.svg",
+        title: "Edamame",
+        description: "Boiled immature soybeans sprinkled with salt.",
+        price: 58,
+        quantity: 22,
+        customized: false,
+        sauce: null,
+        size: null,
+        extra_items: null,
+    },
+    {
+        id: 9,
+        image: "assets/images/index/type-pasta.svg",
+        title: "Sashimi",
+        description: "Slices of raw salmon.",
+        price: 55,
+        quantity: 16,
+        customized: false,
+        sauce: null,
+        size: null,
+        extra_items: null,
+    },
+    {
+        id: 10,
+        image: "assets/images/index/type-pasta.svg",
+        title: "Baozi",
+        description: "Steamed buns filled with pork, chicken, vegetables, and other ingredients.",
+        price: 60,
+        quantity: 14,
+        customized: false,
+        sauce: null,
+        size: null,
+        extra_items: null,
+    },
+    {
+        id: 11,
+        image: "assets/images/index/type-pasta.svg",
+        title: "Grilled Shrimp",
+        description: "Flame-grilled shrimp seasoned with salt and pepper.",
+        price: 75,
+        quantity: 11,
+        customized: false,
+        sauce: null,
+        size: null,
+        extra_items: null,
+    },
+];
+
+// Set data
+localStorage.setItem('foodItems', JSON.stringify(foodItemsList));
+
+// Get data
+const result = JSON.parse(localStorage.getItem('foodItems'));
 
 
-// add_item.addEventListener("click", function() {
-//     if(parseInt(items_number.innerHTML) < 20) {
-//         items_number.innerHTML = parseInt(items_number.innerHTML) + 1;
-//     } else {
-//         items_number.innerHTML = 1;
-//     }
-// });
-
-// remove_item.addEventListener("click", function() {
-//     if(parseInt(items_number.innerHTML) > 1) {
-//         items_number.innerHTML = parseInt(items_number.innerHTML) - 1;
-//     } else {
-//         items_number.innerHTML = 20;
-//     }
-// });
-
-
-
-let list_plat2= JSON.parse(localStorage.getItem("list_plat"));
-console.log(list_plat2);
-
-// Sample item object
-var newItem = {
-    itemImagePath: "assets/images/index/type-pasta.svg",
-    name: "Salades asiatiques",
-    description: "Des salades fraîches qui peuvent inclure des ingrédients comme le poulet grillé, le bœuf tranché, le tofu, les légumes croquants, et diverses vinaigrettes.",
-    price: "50 DH",
-    quantity: 1
-};
 
 var basketContainer = document.getElementById("basket-items-container");
 
-var itemContainer = document.createElement("div");
-itemContainer.classList.add("basket-item-container");
 
-
-for (var itemNumber = 1; itemNumber < 10; itemNumber++) {
+// Use data
+result.forEach((plate, index) => {
     var itemContainer = document.createElement("div");
     itemContainer.classList.add("basket-item-container");
 
     itemContainer.innerHTML = `
-    <img src="${newItem.itemImagePath}">
+    <img src="${plate.image}">
     <div>
-    <p id="item-name">${newItem.name}</p>
-    <p id="item-description">${newItem.description}</p>
-    <p id="item-price">${newItem.price}</p>
+    <p id="item-name">${plate.title}</p>
+    <p id="item-description">${plate.description}</p>
+    <p id="item-price">${plate.price} DH</p>
     <div>
-    <button id="items-number${itemNumber}" class="items-number">${newItem.quantity}</button>
-    <button id="add-item${itemNumber}" class="add-item">+</button>
-    <button id="remove-item${itemNumber}" class="remove-item">-</button>
+    <button id="items-number${index+1}" class="items-number">${plate.quantity}</button>
+    <button id="add-item${index+1}" class="add-item" onclick="addItem(${index+1});">+</button>
+    <button id="remove-item${index+1}" class="remove-item" onclick="removeItem(${index+1});">-</button>
     </div>
     </div>
     `;
 
     basketContainer.appendChild(itemContainer);
+});
 
-
-    var addButton = document.getElementById(`add-item${itemNumber}`);
-    var removeButton = document.getElementById(`remove-item${itemNumber}`);
-    var itemsNumberButton = document.getElementById(`items-number${itemNumber}`);
-    
-    addButton.addEventListener("click", function() {
-        newItem.quantity++;
-        itemsNumberButton.textContent = newItem.quantity;
-    });
-    
-    removeButton.addEventListener("click", function() {
-    if (newItem.quantity > 1) {
-        newItem.quantity--;
-        itemsNumberButton.textContent = newItem.quantity;
+function addItem(id) {
+    if(parseInt(document.getElementById(`items-number${id}`).innerHTML) < 20) {
+        document.getElementById(`items-number${id}`).textContent = parseInt(document.getElementById(`items-number${id}`).innerHTML) + 1;
+    } else {
+        document.getElementById(`items-number${id}`).textContent = 1;
     }
-    });
+}
 
+function removeItem(id) {
+    if(parseInt(document.getElementById(`items-number${id}`).innerHTML) > 1) {
+        document.getElementById(`items-number${id}`).textContent = parseInt(document.getElementById(`items-number${id}`).innerHTML) - 1;
+    } else {
+        document.getElementById(`items-number${id}`).textContent = 20;
+    }
     
 }
 
-function addItem(itemNumber) {
-    var addButton = document.getElementById(`add-item${itemNumber}`);
-    addButton.addEventListener("click", function() {
-        newItem.quantity++;
-        itemsNumberButton.textContent = newItem.quantity;
-    });
-}
 
+
+
+let request_quote = document.getElementById("request-quote");
+let confirm_order = document.getElementById("confirm-order");
+
+request_quote.addEventListener("click", function() {
+    window.location.href = "../../devis.html";
+});
+
+confirm_order.addEventListener("click", function() {
+    // Empty the basket and reload the page
+    localStorage.removeItem("foodItems");
+    location.reload();
+});
