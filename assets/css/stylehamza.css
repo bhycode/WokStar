@@ -1,6 +1,6 @@
 body{
     background-image: url(/assets/images/personalization/cropped-blur-background-of-pub-restaurant-with-wood-table-628137314_2125x1416.jpg  );
-
+    
 }
 .title{
     display: flex;
@@ -209,10 +209,39 @@ body{
       margin-left: 33px;
     }
     .plat-div-d img{
-      isplay: flex;
+      display: flex;
         justify-content: center;
         margin-left: 339px;
         border-radius: 20px;
     }
   }
 
+
+
+/* HEADER */
+header {
+  width: 100%;
+  background-color: #502314;
+  position: fixed;
+  z-index: 10;
+  margin-bottom: 1000px !important;
+  top: 0px;
+}
+
+header a {
+  color: white !important;
+}
+
+header .active {
+  color: #FEBD00 !important;
+}
+
+.header-basket {
+  fill: white !important;
+  width: 4%;
+
+}
+.burger-menu {
+  fill: white !important;
+}
+/* HEADER */

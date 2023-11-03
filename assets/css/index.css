@@ -199,9 +199,6 @@ header .active {
 
 
 @media screen and (max-width: 1350px) {
-    header {
-        background-color: blue;
-    }
 
     #plate1 {
         top: 600px;
@@ -210,9 +207,6 @@ header .active {
 }
 
 @media screen and (max-width: 1000px) {
-    header {
-        background-color: orange;
-    }
 
     #plate1 {
         top: 620px;
@@ -249,47 +243,10 @@ header .active {
 }
 
 @media screen and (max-width: 768px) {
-    header {
-        background-color: pink !important;
-    }
 
     body {
         margin: 0;
         font-family: 'Inter', sans-serif;
-    }
-    
-    /* HEADER */
-    header {
-        background-color: #502314;
-        color: white;
-        padding: 10px 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: fixed;
-        width: 100%;
-        z-index: 1000;
-    }
-    
-    .navbar-nav {
-        display: flex;
-        gap: 20px;
-    }
-    
-    .navbar-nav a {
-        color: white !important;
-        text-decoration: none;
-        transition: color 0.3s ease;
-    }
-    
-    .navbar-nav a:hover {
-        color: #FEBD00 !important;
-    }
-    
-    .header-basket {
-        fill: white !important;
-        width: 24px;
-        height: 24px;
     }
     
     /* Welcome section */

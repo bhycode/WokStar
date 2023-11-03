@@ -1,25 +1,30 @@
 /* HEADER */
 header {
+    width: 100%;
     background-color: #502314;
-}
-
-header a {
+    position: fixed;
+    z-index: 10;
+    margin-bottom: 1000px !important;
+    top: 0px;
+  }
+  
+  header a {
     color: white !important;
-}
-
-header .active {
+  }
+  
+  header .active {
     color: #FEBD00 !important;
-}
-
-.header-basket {
+  }
+  
+  .header-basket {
     fill: white !important;
     width: 4%;
-
-}
-.burger-menu {
+  
+  }
+  .burger-menu {
     fill: white !important;
-}
-/* HEADER */
+  }
+  /* HEADER */
 
 #devis{
     display: flex;
