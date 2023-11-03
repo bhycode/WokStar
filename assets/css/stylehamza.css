@@ -1,5 +1,5 @@
 body{
-    background-image: url(cropped-blur-background-of-pub-restaurant-with-wood-table-628137314_2125x1416.jpg);
+    background-image: url(/assets/images/personalization/cropped-blur-background-of-pub-restaurant-with-wood-table-628137314_2125x1416.jpg  );
 
 }
 .title{
@@ -33,7 +33,7 @@ body{
     background-color: #FEBD00;
     border-radius: 10px;
     width: 300px;
-    margin: 37px;
+    margin: 29px;
     box-shadow: 0 0 10px 5px rgba(55, 55, 55, 0.5); /* Adding shadow effect */
 }
 .tiltlebord{
@@ -80,7 +80,7 @@ body{
   border-radius: 10px;
   display: flex;
   margin: 50px;
-  margin-left: 140px;
+  margin-left: 127px;;
 }
 
 
@@ -121,7 +121,28 @@ body{
   margin-left: 30px;
 
 }
-
+#title1{
+  display: flex;
+  justify-content: center;
+  color: black;
+}
+#description1{
+  display: flex;
+  justify-content: center;
+  color: brown;
+}
+#price1{
+  color: black;
+  font-size: x-large;
+}
+.description-div p{
+  color: rgb(0 0 0);
+  display: flex;
+  font-size: larger;
+} */
+.plat-div-d img{
+  border-radius: 13px;
+}
   @media (min-width: 1024px) {
     .title{
       margin-top: 140px;
@@ -186,6 +207,12 @@ body{
     .descrip{
       display: flex;
       margin-left: 33px;
+    }
+    .plat-div-d img{
+      isplay: flex;
+        justify-content: center;
+        margin-left: 339px;
+        border-radius: 20px;
     }
   }
 

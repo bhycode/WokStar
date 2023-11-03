@@ -1,3 +1,26 @@
+/* HEADER */
+header {
+    background-color: #502314;
+}
+
+header a {
+    color: white !important;
+}
+
+header .active {
+    color: #FEBD00 !important;
+}
+
+.header-basket {
+    fill: white !important;
+    width: 4%;
+
+}
+.burger-menu {
+    fill: white !important;
+}
+/* HEADER */
+
 #devis{
     display: flex;
     flex-direction: column;
@@ -55,9 +78,13 @@ table tr td {
 
 .no-border-right {
     border-right: none;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
 }
 .no-border-left {
     border-left: none;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
 }
 
 .buttons{
@@ -71,10 +98,26 @@ table tr td {
     font-size: 20px;
     padding: 10px 40px;
     margin-left: 10%;
+    margin-bottom: 20px;
     border: none;
     background-color: #FEBD00;
     color: #502314;
     border-radius: 5px;
+}
+
+.item-container{
+    border: 2px solid;
+    display: block;
+}
+#devis-content{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.none{
+    display: none;
 }
 
 @media print {
@@ -84,6 +127,16 @@ table tr td {
 
   /* Masquez l'en-tête et le pied de page */
   @page {
-    margin: 0.5cm 0.5cm 0cm 0.5cm; /* Ajustez les marges si nécessaire */
+    margin: -2cm 0.5cm 0.5cm 0.5cm; /* Ajustez les marges si nécessaire */
   }
+
 }
+
+/* @media screen and (min-width: 768px) {
+    .infos-customer p{
+        font-size: 15px;
+    }
+    .donnees-entreprise p{
+        margin-top: 3%;
+    }
+} */
