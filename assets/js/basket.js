@@ -5,8 +5,8 @@ const foodItemsList = [
         image: "assets/images/index/type-pasta.svg",
         title: "Asian Salads+++++",
         description: "Fresh salads with ingredients such as grilled chicken, sliced beef, tofu, crisp vegetables, and various dressings.",
-        price: 69,
-        quantity: 10,
+        price: 150,
+        quantity: 12,
         customized: false,
         sauce: null,
         size: null,
@@ -168,20 +168,23 @@ result.forEach((plate, index) => {
 });
 
 function addItem(id) {
-    if(parseInt(document.getElementById(`items-number${id}`).innerHTML) < 20) {
-        document.getElementById(`items-number${id}`).textContent = parseInt(document.getElementById(`items-number${id}`).innerHTML) + 1;
+    if(result[id].quantity < 20) {
+        result[id].quantity += 1;
+        document.getElementById(`items-number${id}`).textContent = result[id].quantity;
     } else {
+        result[id].quantity = 1;
         document.getElementById(`items-number${id}`).textContent = 1;
     }
 }
 
 function removeItem(id) {
-    if(parseInt(document.getElementById(`items-number${id}`).innerHTML) > 1) {
-        document.getElementById(`items-number${id}`).textContent = parseInt(document.getElementById(`items-number${id}`).innerHTML) - 1;
+    if(result[id].quantity > 1) {
+        result[id].quantity -= 1;
+        document.getElementById(`items-number${id}`).textContent = result[id].quantity;
     } else {
+        result[id].quantity = 20;
         document.getElementById(`items-number${id}`).textContent = 20;
     }
-    
 }
 
 
