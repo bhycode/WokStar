@@ -90,55 +90,6 @@
     </div>
   </section>  
 
-
-  <script>
-    // Sélectionnez l'élément avec l'ID "date"
-    var dateElement = document.getElementById("date");
-  
-    // Obtenir la date actuelle
-    var currentDate = new Date();
-  
-    // Formatez la date comme vous le souhaitez
-    var options = { year: 'numeric', month: 'long', day: 'numeric' };
-    var formattedDate = currentDate.toLocaleDateString(undefined, options);
-  
-    // Affichez la date dans l'élément HTML
-    dateElement.textContent = "Le : " + formattedDate;
-  </script>
-  
-
-
-  <script>
-    function imprimerPage() {
-        const elementsToHide = document.querySelectorAll('.no-print');
-        elementsToHide.forEach(element => {
-            element.style.display = 'none';
-        });
-        const parag = document.querySelectorAll('.parag');
-        parag.forEach(element => {
-            element.style.fontSize = "15px";
-        });
-
-        // Imprime la page
-        window.print();
-
-        // Rétablit l'affichage initial
-        elementsToHide.forEach(element => {
-            element.style.display = 'block'; // Vous pouvez également utiliser 'initial'
-        });
-        parag.forEach(element => {
-            element.style.fontSize = '20px'; // Vous pouvez également utiliser 'initial'
-        });
-    }
-  </script>
-
-  <script>
-    function clear_basket(){
-        console.log("clear_basket function called");
-        const devis = document.getElementById('devis-content')
-        devis.classList.add("none")
-    }
-  </script>
   <script src="assets/js/devis.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>   
