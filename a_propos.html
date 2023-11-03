@@ -7,6 +7,9 @@
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>A propos nous</title>
 </head>
     <body>
@@ -76,32 +79,39 @@
         <section>
             <div class="history">
                 <h2>Our history</h2>
-                <div class="slider">
-                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                        <ol class="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                        </ol>
-                        <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img class="d-block w-100" src="assets/images/a_propos/Capture d'écran 2023-11-01 150522.png" alt="First slide">
+                <div class="container">
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-date">2005</div>
+                            <div class="timeline-content">
+                                <h3>Les Débuts</h3>
+                                <p>WokStar est né de la passion pour la cuisine asiatique. Nos fondateurs, Emma et David, ont décidé d'ouvrir un restaurant unique à Agadir.</p>
+                            </div>
                         </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100" src="assets/images/a_propos/events2.png" alt="Second slide">
+            
+                        <div class="timeline-item">
+                            <div class="timeline-date">2008</div>
+                            <div class="timeline-content">
+                                <h3>Exploration en Asie</h3>
+                                <p>Pour offrir des saveurs authentiques, Emma et David ont entrepris un voyage à travers l'Asie, découvrant de nouvelles recettes et techniques de cuisson.</p>
+                            </div>
                         </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100" src="assets/images/a_propos/events22.png" alt="Third slide">
+            
+                        <div class="timeline-item">
+                            <div class="timeline-date">2010</div>
+                            <div class="timeline-content">
+                                <h3>Ouverture de WokStar</h3>
+                                <p>En 2010, WokStar a ouvert ses portes pour la première fois, offrant une expérience culinaire exceptionnelle avec une variété de plats asiatiques.</p>
+                            </div>
                         </div>
+            
+                        <div class="timeline-item">
+                            <div class="timeline-date">Aujourd'hui</div>
+                            <div class="timeline-content">
+                                <h3>Notre Réussite</h3>
+                                <p>WokStar est devenu un restaurant emblématique, célébrant la diversité de la cuisine asiatique. Nous sommes fiers de partager notre passion avec vous.</p>
+                            </div>
                         </div>
-                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                        </a>
                     </div>
                 </div>
             </div>
@@ -130,11 +140,51 @@
             </div>
 
         </section>
-
         <section id="partenaires-section">
             <h2>Nos partenaires</h2>
 
-            <div class="partenaires">
+            <div id="myCarousel" class="carousel slide mb-5" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col">
+                                <img style="width: 300px; height:80px;" class="d-block mr-2" src="assets/images/a_propos/CitySuper.png">
+                            </div>
+                            <div class="col">
+                                <img style="width: 300px; height:80px;" class="d-block mr-2" src="assets/images/a_propos/R.jpeg">
+                            </div>
+                            <div class="col">
+                                <img style="width: 300px; height:80px;" class="d-block mr-2" src="assets/images/a_propos/Lotusjpeg.jpeg">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col">
+                                <img style="width: 300px; height:80px;" class="d-block mr-2" src="assets/images/a_propos/TESCO.jpeg">
+                            </div>
+                            <div class="col">
+                                <img style="width: 300px; height:80px;" class="d-block mr-2" src="assets/images/a_propos/Lotusjpeg.jpeg">
+                            </div>
+                            <div class="col">
+                                <img style="width: 300px; height:80px;" class="d-block mr-2" src="assets/images/a_propos/R.jpeg">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Ajoutez d'autres diapositives si nécessaire -->
+                </div>
+                <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" ariahidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            
+
+            <!-- <div class="partenaires">
                 <div class="partener1">
                     <img src="assets/images/a_propos/R.jpeg" alt="">
                 </div>
@@ -150,17 +200,74 @@
                 <div class="partener5">
                     <img src="assets/images/a_propos/TESCO.jpeg" alt="">
                 </div>
-                <!-- <div class="partener6">
+                <div class="partener6">
                     <img src="assets/images/a_propos/events22.png" alt="">
-                </div> -->
-            </div>
+                </div>
+            </div> -->
 
         </section>
-        <section>
-            <footer>
-                
-            </footer>
-        </section>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="single-box">
+                            <img src="img/logo.png" alt="">
+                       
+                        <h3>We Accect</h3>
+                        <div class="card-area">
+                                <i class="fa fa-cc-visa"></i>
+                               
+                                <i class="fa fa-cc-mastercard"></i>
+                                <i class="fa fa-cc-paypal"></i>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="single-box">
+                            <h2>Community</h2>
+                        <ul>
+                            <li><a href="#">Community Central</a></li>
+                            <li><a href="#">Support</a></li>
+                            <li><a href="#">Help</a></li>
+                            <li><a href="#">Do not sell my info</a></li>
+                            <li><a href="#">Ask us </a></li>
+                            <li><a href="#">Delivery</a></li>
+                        </ul>
+                        </div>                    
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="single-box">
+                            <h2>Overview</h2>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="carte.html">Card </a></li>
+                            <li><a href="personalisation.html">Personalisation </a></li>
+                            <li><a href="a_propos.html">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            
+                        </ul>
+                        </div>                    
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="single-box">
+                            <h2>WokStar </h2>
+                            <p> Our restaurants often offer a rich and flavorful menu that includes dishes from countries such as China, Japan, Thailand, India, Vietnam, and more. </p>
+                            
+                            <h2>Follow us on</h2>
+                            <p class="socials">
+                                <i class="fa fa-facebook"></i>
+                                <i class="fa fa-pinterest"></i>
+                                <i class="fa fa-twitter"></i>
+                                <i class="bi bi-instagram"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/js/bootstrap.min.js">
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
     </body>

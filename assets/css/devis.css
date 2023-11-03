@@ -92,7 +92,7 @@ table tr td {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin-top: 10%;
+    margin-top: 10px;
 }
 .buttons button{
     font-size: 20px;
@@ -127,6 +127,7 @@ table tr td {
     background-color: rgb(174, 210, 174);
     text-align: center;
     margin-top: 10%;
+    margin-bottom: 10px;
 }
 #message p{
     margin-top:2%;
@@ -135,6 +136,9 @@ table tr td {
 
 
 @media print {
+    footer{
+        display: none;
+    }
   @page {
     size: auto; /* Définissez la taille de la page */
   }
