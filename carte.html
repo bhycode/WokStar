@@ -11,39 +11,53 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
+
 </head>
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg" style="background-color: rgb(214, 35, 0);">
+        <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img class="logo" src="assets/imgs/Logo.png" alt="logo" width="60"
-                        height="70"></a>
+                <a class="navbar-brand" href="#">
+                    <img class="logo" src="assets/imgs/LOGO.png" alt="" style="height: 47px;">
+                </a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 
-                    <span class="navbar-toggler-icon"></span>
+                    <!-- Burger menu -->
+                    <span class="navbar-toggler-icon "></span>
+
                 </button>
+
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
+
                         <li class="nav-item">
-                            <a class="nav-link " href="#">Home</a>
+                            <a class="nav-link " aria-current="page" href="index.html">Home</a>
                         </li>
+
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Card</a>
+                            <a class="nav-link active"  aria-current="page" href="carte.html" >Card</a>
                         </li>
+
                         <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
+                            <a class="nav-link" href="personalisation.html" aria-disabled="true">Personalization</a>
                         </li>
+
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
+                            <a class="nav-link" href="a_propos.html" aria-disabled="true">About</a>
                         </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html" aria-disabled="true">Contact</a>
+                        </li>
+
                     </ul>
                 </div>
             </div>
-            <a href="#">
-                <img src="assets/imgs/panier.png" alt="panier" height="40" width="40" style="margin-right: 20px;">
+            <a class="navbar-brand1 header-basket" href="basket.html">
+                <img class="logo" src="assets/images/basket/basket.svg" alt="" style="height: 47px;">
             </a>
         </nav>
     </header>
@@ -208,7 +222,7 @@
                         <p class="price">60 DH</p>
                         <button onclick="addToCart(10)">Add to cart</button>
                         <button onclick="handlePersonalizeButtonClick(event, '10')">Personalize</button>
-                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -222,7 +236,7 @@
                         <p class="price">75 DH</p>
                         <button onclick="addToCart(11)">Add to cart</button>
                         <button onclick="handlePersonalizeButtonClick(event, '11')">Personalize</button>
-                        </div>
+                    </div>
                 </div>
                 <div class="plat-div" id="12">
                     <img src="assets/imgs/-Calamars frits.jpeg " alt="Calamars" width="280" height="320">
@@ -233,7 +247,7 @@
                         <p class="price">55 DH</p>
                         <button onclick="addToCart(12)">Add to cart</button>
                         <button onclick="handlePersonalizeButtonClick(event, '12')">Personalize</button>
-                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -247,7 +261,7 @@
                         <p class="price">40 DH</p>
                         <button onclick="addToCart(13)">Add to cart</button>
                         <button onclick="handlePersonalizeButtonClick(event, '13')">Personalize</button>
-                        </div>
+                    </div>
                 </div>
                 <div class="plat-div" id="14">
                     <img src="assets/imgs/Feuilles de vigne farcies.webp " alt="Baozi" width="280" height="320">
@@ -258,7 +272,7 @@
                         <p class="price">70 DH</p>
                         <button onclick="addToCart(14)">Add to cart</button>
                         <button onclick="handlePersonalizeButtonClick(event, '14')">Personalize</button>
-                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -275,9 +289,9 @@
                         </p>
                         <p class="price">69 DH</p>
                         <button onclick="addToCart(15)">Add to cart</button>
-                        <button class="personalize-button" data-div-id="appetizer"
-                        <button onclick="handlePersonalizeButtonClick(event, '15')">Personalize</button>
-                        </div>
+                        <button class="personalize-button" data-div-id="appetizer">
+                            <button onclick="handlePersonalizeButtonClick(event, '15')">Personalize</button>
+                    </div>
                 </div>
                 <div class="plat-div" id="16">
                     <img src="assets/imgs/Poulet à l'orange.jpg" alt="Orange Chicken" width="280" height="320">
@@ -288,13 +302,13 @@
                         <p class="price">59 DH</p>
                         <button onclick="addToCart(16)">Add to cart</button>
                         <button onclick="handlePersonalizeButtonClick(event, '16')">Personalize</button>
-                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="menu-row">
                 <div class="plat-div" id="17">
-                    <img src="assets/imgs/Bœuf au brocoli.webp" alt="Beef with Broccoli" width="280" height="320">
+                    <img src="assets/imgs/Boeuf au brocoli.webp" alt="Beef with Broccoli" width="280" height="320">
                     <div class="description-div">
                         <h3>Beef with Broccoli</h3>
                         <p>classic Chinese preparation that combines slices of beef, broccoli florets, and soy sauce.
@@ -302,7 +316,7 @@
                         <p class="price">75 DH</p>
                         <button onclick="addToCart(17)">Add to cart</button>
                         <button onclick="handlePersonalizeButtonClick(event, '17')">Personalize</button>
-                        </div>
+                    </div>
                 </div>
                 <div class="plat-div" id="18">
                     <img src="assets/imgs/Pad thai.jpg" alt="Pad thai" width="280" height="320">
@@ -313,7 +327,7 @@
                         <p class="price">55 DH</p>
                         <button onclick="addToCart(18)">Add to cart</button>
                         <button onclick="handlePersonalizeButtonClick(event, '18')">Personalize</button>
-                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -327,7 +341,7 @@
                         <p class="price">55 DH</p>
                         <button onclick="addToCart(19)">Add to cart</button>
                         <button onclick="handlePersonalizeButtonClick(event, '19')">Personalize</button>
-                        </div>
+                    </div>
                 </div>
                 <div class="plat-div" id="20">
                     <img src="assets/imgs/-Nouilles sautées.jpg" alt="-Nouilles sautées" width="280" height="320">
@@ -337,7 +351,7 @@
                         <p class="price">55 DH</p>
                         <button onclick="addToCart(20)">Add to cart</button>
                         <button onclick="handlePersonalizeButtonClick(event, '20')">Personalize</button>
-                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -351,7 +365,7 @@
                         <p class="price">50 DH</p>
                         <button onclick="addToCart(21)">Add to cart</button>
                         <button onclick="handlePersonalizeButtonClick(event, '21')">Personalize</button>
-                        </div>
+                    </div>
                 </div>
                 <div class="plat-div" id="22">
                     <img src="assets/imgs/Curry_vegetarien.jpg" alt="Curry_vegetarien" width="280" height="320">
@@ -361,7 +375,7 @@
                         <p class="price">65 DH</p>
                         <button onclick="addToCart(22)">Add to cart</button>
                         <button onclick="handlePersonalizeButtonClick(event, '22')">Personalize</button>
-                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -376,7 +390,7 @@
                         <p class="price">59 DH</p>
                         <button onclick="addToCart(23)">Add to cart</button>
                         <button onclick="handlePersonalizeButtonClick(event, '23')">Personalize</button>
-                        </div>
+                    </div>
                 </div>
                 <div class="plat-div" id="24">
                     <img src="assets/imgs/pho.jpg" alt="pho" width="280" height="320">
@@ -386,7 +400,7 @@
                         <p class="price">60 DH</p>
                         <button onclick="addToCart(24)">Add to cart</button>
                         <button onclick="handlePersonalizeButtonClick(event, '24')">Personalize</button>
-                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -401,7 +415,7 @@
                         <p class="price">79 DH</p>
                         <button onclick="addToCart(25)">Add to cart</button>
                         <button onclick="handlePersonalizeButtonClick(event, '25')">Personalize</button>
-                        </div>
+                    </div>
                 </div>
                 <div class="plat-div" id="26">
                     <img src="assets/imgs/Sushi.webp" alt="Sushi" width="280" height="320">
@@ -411,7 +425,7 @@
                         <p class="price">75 DH</p>
                         <button onclick="addToCart(26)">Add to cart</button>
                         <button onclick="handlePersonalizeButtonClick(event, '26')">Personalize</button>
-                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -425,7 +439,7 @@
                         <p class="price">52 DH</p>
                         <button onclick="addToCart(27)">Add to cart</button>
                         <button onclick="handlePersonalizeButtonClick(event, '27')">Personalize</button>
-                        </div>
+                    </div>
                 </div>
                 <div class="plat-div" id="28">
                     <img src="assets/imgs/Légumes sautés.jpeg" alt="Légumes sautés" width="280" height="320">
@@ -435,7 +449,7 @@
                         <p class="price">55 DH</p>
                         <button onclick="addToCart(28)">Add to cart</button>
                         <button onclick="handlePersonalizeButtonClick(event, '28')">Personalize</button>
-                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -452,7 +466,7 @@
                         <p class="price">30 DH</p>
                         <button onclick="addToCart(29)">Add to cart</button>
                         <button onclick="handlePersonalizeButtonClick(event, '29')">Personalize</button>
-                        </div>
+                    </div>
                 </div>
                 <div class="plat-div" id="30">
                     <img src="assets/imgs/Boissons aux fruits exotiques.jpg" alt="Boissons aux fruits exotiques"
@@ -464,7 +478,7 @@
                         <p class="price">39 DH</p>
                         <button onclick="addToCart(30)">Add to cart</button>
                         <button onclick="handlePersonalizeButtonClick(event, '30')">Personalize</button>
-                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -478,7 +492,7 @@
                         <p class="price">37 DH</p>
                         <button onclick="addToCart(31)">Add to cart</button>
                         <button onclick="handlePersonalizeButtonClick(event, '31')">Personalize</button>
-                        </div>
+                    </div>
                 </div>
                 <div class="plat-div" id="32">
                     <img src="assets/imgs/Thé glacé.webp" alt="Thé glacé.webp" width="280" height="320">
@@ -490,7 +504,7 @@
                         <p class="price">25 DH</p>
                         <button onclick="addToCart(32)">Add to cart</button>
                         <button onclick="handlePersonalizeButtonClick(event, '32')">Personalize</button>
-                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -504,7 +518,7 @@
                         <p class="price">32 DH</p>
                         <button onclick="addToCart(33)">Add to cart</button>
                         <button onclick="handlePersonalizeButtonClick(event, '33')">Personalize</button>
-                        </div>
+                    </div>
                 </div>
                 <div class="plat-div" id="34">
                     <img src="assets/imgs/Boissons non alcoolisées asiatiques.webp"
@@ -517,7 +531,7 @@
                         <p class="price">45 DH</p>
                         <button onclick="addToCart(34)">Add to cart</button>
                         <button onclick="handlePersonalizeButtonClick(event, '34')">Personalize</button>
-                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -531,7 +545,7 @@
                         <p class="price">39 DH</p>
                         <button onclick="addToCart(35)">Add to cart</button>
                         <button onclick="handlePersonalizeButtonClick(event, '35')">Personalize</button>
-                        </div>
+                    </div>
                 </div>
                 <div class="plat-div" id="36">
                     <img src="assets/imgs/Boissons au taro.webp" alt="Boissons au taro" width="280" height="320">
@@ -542,7 +556,7 @@
                         <p class="price">40 DH</p>
                         <button onclick="addToCart(36)">Add to cart</button>
                         <button onclick="handlePersonalizeButtonClick(event, '36')">Personalize</button>
-                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -557,7 +571,7 @@
                         <p class="price">35 DH</p>
                         <button onclick="addToCart(37)">Add to cart</button>
                         <button onclick="handlePersonalizeButtonClick(event, '37')">Personalize</button>
-                        </div>
+                    </div>
                 </div>
                 <div class="plat-div" id="38">
                     <img src="assets/imgs/Sugarcane Juice.webp" alt="Sugarcane Juice" width="280" height="320">
@@ -567,7 +581,7 @@
                         <p class="price">20 DH</p>
                         <button onclick="addToCart(38)">Add to cart</button>
                         <button onclick="handlePersonalizeButtonClick(event, '38')">Personalize</button>
-                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -581,7 +595,7 @@
                         <p class="price">35 DH</p>
                         <button onclick="addToCart(39)">Add to cart</button>
                         <button onclick="handlePersonalizeButtonClick(event, '39')">Personalize</button>
-                        </div>
+                    </div>
                 </div>
                 <div class="plat-div" id="40">
                     <img src="assets/imgs/Teh Tarik.webp" alt="Teh Tarik " width="280" height="320">
@@ -591,7 +605,7 @@
                         <p class="price">29 DH</p>
                         <button onclick="addToCart(40)">Add to cart</button>
                         <button onclick="handlePersonalizeButtonClick(event, '40')">Personalize</button>
-                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -605,12 +619,16 @@
                         <p class="price">25 DH</p>
                         <button onclick="addToCart(41)">Add to cart</button>
                         <button onclick="handlePersonalizeButtonClick(event, '41')">Personalize</button>
-                        </div>
+                    </div>
                 </div>
 
             </div>
         </section>
+        <section>
+            <div id="pagination">
 
+            </div>
+        </section>
         <footer class="footer">
             <div class="social">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -646,12 +664,12 @@
 
 
 
-<script>
-    function personalizeButtonClick(itemIndex) {
-    // Redirect to the Personalization page with the item index as a URL parameter
-    window.location.href = `personalisation.html?itemIndex=${itemIndex}`;
-}
-</script>
+        <script>
+            function personalizeButtonClick(itemIndex) {
+                // Redirect to the Personalization page with the item index as a URL parameter
+                window.location.href = `personalisation.html?itemIndex=${itemIndex}`;
+            }
+        </script>
 
 
         <script src="assets/js/carte.js"></script>

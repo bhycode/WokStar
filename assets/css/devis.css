@@ -1,25 +1,30 @@
 /* HEADER */
 header {
+    width: 100%;
     background-color: #502314;
-}
-
-header a {
+    position: fixed;
+    z-index: 10;
+    margin-bottom: 1000px !important;
+    top: 0px;
+  }
+  
+  header a {
     color: white !important;
-}
-
-header .active {
+  }
+  
+  header .active {
     color: #FEBD00 !important;
-}
-
-.header-basket {
+  }
+  
+  .header-basket {
     fill: white !important;
     width: 4%;
-
-}
-.burger-menu {
+  
+  }
+  .burger-menu {
     fill: white !important;
-}
-/* HEADER */
+  }
+  /* HEADER */
 
 #devis{
     display: flex;
@@ -92,7 +97,7 @@ table tr td {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin-top: 10%;
+    margin-top: 10px;
 }
 .buttons button{
     font-size: 20px;
@@ -120,7 +125,25 @@ table tr td {
     display: none;
 }
 
+/* --------------------message-style----------------------- */
+
+#message{
+    width: 60%;
+    background-color: rgb(174, 210, 174);
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 10px;
+}
+#message p{
+    margin-top:2%;
+}
+
+
+
 @media print {
+    footer{
+        display: none;
+    }
   @page {
     size: auto; /* Définissez la taille de la page */
   }
