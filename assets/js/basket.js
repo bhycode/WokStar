@@ -135,7 +135,7 @@ const foodItemsList = [
 ];
 
 // Set data
-localStorage.setItem('foodItems', JSON.stringify(foodItemsList));
+//localStorage.setItem('foodItems', JSON.stringify(foodItemsList));
 
 // Get data
 const result = JSON.parse(localStorage.getItem('foodItems'));

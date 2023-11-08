@@ -1,3 +1,7 @@
+// Basket
+let itemsToBasket = [];
+// Basket
+
 // document.addEventListener("DOMContentLoaded", function() {
     const sections = document.querySelectorAll(".menu-section");
 
@@ -596,8 +600,13 @@ function addToCart(itemId) {
 
         console.log("Added to storage:", clickedObject);
         localStorage.setItem("list_plat", JSON.stringify(clickedObject));
+        // Basket
+        itemsToBasket.push(clickedObject);
+        localStorage.setItem('foodItems', JSON.stringify(itemsToBasket));
+
+        // Basket
         console.log(localStorage)
-        window.location.href = "./basket.html"; 
+        //window.location.href = "./basket.html"; 
     } else {
         console.log("not found.");
     }
@@ -692,10 +701,11 @@ const selectCat=(cat)=>{
 
 function handlePersonalizeButtonClick(event, itemId) {
    const clickedObject = list_plat.find(item => item.id === itemId);
+   
    if (clickedObject && clickedObject.customized === false){
         clickedObject.customized = true;
         console.log("customize is false and has been changed to true");
-   } else {
+    } else {
      console.log("customize is not false or 'clickedObject' is undefined");
    }  
    

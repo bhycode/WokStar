@@ -1,3 +1,8 @@
+// Basket
+const personalizedPlateToBasket = JSON.parse(localStorage.getItem("personalizedPlate"));
+const itemsToBasket = JSON.parse(localStorage.getItem('foodItems'));
+// Basket
+
 document.addEventListener('DOMContentLoaded', function() {
     const validButton = document.querySelector('.boton');
     const dropdowns = document.querySelectorAll('.adding select');
@@ -58,6 +63,15 @@ function addToPlate() {
     console.log('Sauces:', sauces);
     console.log('Size:', size);
     console.log('Extra Items:', extraItems);
+
+
+    // Basket
+    personalizedPlateToBasket.sauce = sauces;
+    personalizedPlateToBasket.size = size;
+    personalizedPlateToBasket.extra_items = extraItems;
+    // Basket
+
+
 }
 function calculateTotalPrice() {
     const souceInput = document.getElementById('souceInput');
@@ -71,7 +85,17 @@ function calculateTotalPrice() {
     const totalPrice = selectedSaucePrice + selectedSizePrice + selectedExtraPrice;
     
     document.getElementById('totalPrice').textContent = totalPrice;
+
+    // Basket
+    personalizedPlateToBasket.price = totalPrice;
+    // Basket
 }
 
-
+// Basket
+document.getElementById("dataInput").addEventListener("click", function() {
+    personalizedPlateToBasket.sauce = document.getElementById("price1").innerHTML;
+    itemsToBasket.push(personalizedPlateToBasket);
+    localStorage.setItem('foodItems', JSON.stringify(itemsToBasket));
+})
+// Basket
 
