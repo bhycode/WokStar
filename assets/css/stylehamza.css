@@ -33,7 +33,7 @@ body{
     background-color: #FEBD00;
     border-radius: 10px;
     width: 300px;
-    margin: 29px;
+    margin: 56px;
     box-shadow: 0 0 10px 5px rgba(55, 55, 55, 0.5); /* Adding shadow effect */
 }
 .tiltlebord{
@@ -80,7 +80,7 @@ body{
   border-radius: 10px;
   display: flex;
   margin: 50px;
-  margin-left: 127px;;
+  margin-left: 163px;
 }
 
 
