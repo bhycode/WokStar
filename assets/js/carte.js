@@ -606,7 +606,7 @@ function addToCart(itemId) {
 
         // Basket
         console.log(localStorage)
-        //window.location.href = "./basket.html"; 
+        // window.location.href = "./basket.html"; 
     } else {
         console.log("not found.");
     }
@@ -628,7 +628,7 @@ function addToCart(itemId) {
 // }
 
 //--------------------------------
-const main = document.getElementById("main")
+const main = document.getElementById("menu-container")
 const pagination = document.getElementById("pagination")
 
 var selectedCat = selectedOption
@@ -638,7 +638,7 @@ const show = (page)=>{
     main.innerHTML=""
     let start = (page - 1) * totalShow
     
-    const listByCat = list.filter((item)=>{
+    const listByCat = list_plat.filter((item)=>{
         return item.cat === selectedCat 
     })
 
@@ -652,12 +652,12 @@ const show = (page)=>{
         htlmElem.setAttribute("id",item.id)
         htlmElem.innerHTML =  `Name : ${item.name} Price:${item.price}`
 
-        let btn = document.createElement("button")
-        btn.innerHTML = "show data"
-        btn.addEventListener("click",function(){ 
-            showData(item.id)
-        })
-        htlmElem.appendChild(btn)
+        // let btn = document.createElement("button")
+        // btn.innerHTML = "show data"
+        // btn.addEventListener("click",function(){ 
+        //     showData(item.id)
+        // })
+        // htlmElem.appendChild(btn)
 
         main.appendChild(htlmElem)
     })
@@ -685,7 +685,7 @@ const selectCat=(cat)=>{
     //show the first page by default
     show(1)
 }
-
+selectCat(selectedOption)
 
 
 
