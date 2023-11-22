@@ -14,6 +14,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <!-- <link rel="stylesheet" href="style1.css" /> -->
     <link rel="stylesheet" href="assets/css/Contac1.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/c
+    ss/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -22,51 +26,52 @@
   <body>
     <!--HEADER-->
     <header>
-      <nav class="navbar navbar-expand-lg">
-          <div class="container-fluid">
-              <a class="navbar-brand" href="#">
-                  <img class="logo" src="assets/imgs/LOGO.png" alt="" style="height: 47px;">
-              </a>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img class="logo" src="assets/imgs/LOGO.png" alt="" style="height: 47px;">
+                </a>
+    
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    
+                    <!-- Burger menu -->
+                    <span class="navbar-toggler-icon "></span>
+                    
+                </button>
+    
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
 
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
 
-                  <!-- Burger menu -->
-                  <span class="navbar-toggler-icon "></span>
+                        <li class="nav-item">
+                            <a class="nav-link" href="carte.html" aria-disabled="true">Card</a>
+                        </li>
 
-              </button>
+                        <li class="nav-item">
+                            <a class="nav-link" href="personalisation.html" aria-disabled="true">Personalization</a>
+                        </li>
 
-              <div class="collapse navbar-collapse" id="navbarNav">
-                  <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="a_propos.html" aria-disabled="true">About</a>
+                        </li>
 
-                      <li class="nav-item">
-                          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                      </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html" aria-disabled="true">Contact</a>
+                        </li>
 
-                      <li class="nav-item">
-                          <a class="nav-link" href="carte.html" aria-disabled="true">Card</a>
-                      </li>
-
-                      <li class="nav-item">
-                          <a class="nav-link" href="personalisation.html" aria-disabled="true">Personalization</a>
-                      </li>
-
-                      <li class="nav-item">
-                          <a class="nav-link" href="a_propos.html" aria-disabled="true">About</a>
-                      </li>
-
-                      <li class="nav-item">
-                          <a class="nav-link" href="contact.html" aria-disabled="true">Contact</a>
-                      </li>
-
-                  </ul>
-              </div>
-</div>
-          <a class="navbar-brand1 header-basket" href="basket.html">
-              <img class="logo" src="assets/images/basket/basket.svg" alt="" style="height: 47px;">
-          </a>
-      </nav>
-  </header>
+                    </ul>
+                </div>
+    
+            </div>
+            <a class="navbar-brand1 header-basket" href="basket.html">
+                <img class="logo" src="assets/images/basket/basket.svg" alt="" style="height: 47px;">
+            </a>
+        </nav>
+    </header>
   <!--HEADER-->
 <section class="home-welcome-section">
     <div class="container-contact">
@@ -87,21 +92,26 @@
         <div>
             <p> Full Name :</p>
           <input type="text" class="field" id="name" placeholder="Your full name" />
+          <span style="color:red" id="name_error"></span>
           </div>
           
           <div><p>Phone number:</p>
             <input type="text" class="field" id="num" placeholder="Your number" />
+            <span style="color:red" id="name_error"></span>
           </div>
           <div><p>Email :</p>
             <input type="email" class="field" id="email" placeholder="Your Email" />
+            <span style="color:red" id="email_error"></span>
           </div>
           <div>
             <p>Password :</p>
           <input type="password" class="field" id="pass" placeholder="Your Password" />
+          <span style="color:red" id="pass_error"></span>
           </div>
           <div>
             <p>Message:</p>
           <input type="text" class="field" id="msg" placeholder="Your message" />
+          <span style="color:red" id="name_error"></span>
           </div>
           
           
@@ -193,41 +203,104 @@
 
 
     
+$
 
 
-<script>
-    function message(){
-  var Name = document.getElementById('name');
-  var email = document.getElementById('email');
-  var msg = document.getElementById('msg');
-  var num = document.getElementById('num');
-  const success = document.getElementById('success');
-  const danger = document.getElementById('danger');
-
-  if(Name.value === '' || email.value === '' || msg.value === '' || pass.value === ''|| num.value === ''){
-      danger.style.display = 'block';
-  }
-  else{
-      setTimeout(() => {
-          Name.value = '';
-          email.value = '';
-          msg.value = '';
-          num.value = '';
-          pass.value = '';
-      }, 2000);
-
-      success.style.display = 'block';
-  }
 
 
-  setTimeout(() => {
-      danger.style.display = 'none';
-      success.style.display = 'none';
-  }, 4000);
-
-}
+   
     
-  </script>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Your head content goes here -->
+  </head>
+  <body>
+    <!-- Your HTML body content goes here -->
+
+    <script>
+      function validateInput() {
+        var nameRegex = /^[A-Za-z\s]{3,}$/;
+        var numRegex = /^\d{10}$/;
+        var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+        var passRegex = /.{6,}/;
+        var msgRegex = /.+/;
+
+        var Name = document.getElementById('name');
+        var email = document.getElementById('email');
+        var msg = document.getElementById('msg');
+        var num = document.getElementById('num');
+        var pass = document.getElementById('pass');
+
+        const danger = document.getElementById('danger');
+
+        let isValid = true;
+
+        if (!nameRegex.test(Name.value)) {
+            danger.innerHTML = "Valid Name is required";
+            isValid = false;
+        }
+
+        if (!emailRegex.test(email.value)) {
+            danger.innerHTML = "Valid Email is required";
+            isValid = false;
+        }
+
+        if (!msgRegex.test(msg.value)) {
+            danger.innerHTML = "Message is required";
+            isValid = false;
+        }
+
+        if (!numRegex.test(num.value)) {
+            danger.innerHTML = "Valid Phone Number is required";
+            isValid = false;
+        }
+
+        if (!passRegex.test(pass.value)) {
+            danger.innerHTML = "Password should be at least 6 characters";
+            isValid = false;
+        }
+
+        if (isValid) {
+            // Store data in local storage
+            localStorage.setItem('Name', Name.value);
+            localStorage.setItem('Email', email.value);
+            localStorage.setItem('Message', msg.value);
+            localStorage.setItem('Phone', num.value);
+            localStorage.setItem('Password', pass.value);
+
+            // Display data in the alert
+            alert(
+                `Form submitted successfully!\n\nName: ${Name.value}\nEmail: ${email.value}\nMessage: ${msg.value}\nPhone: ${num.value}\nPassword: ${pass.value}`
+            );
+
+            // Clear form fields
+            setTimeout(() => {
+                Name.value = '';
+                email.value = '';
+                msg.value = '';
+                num.value = '';
+                pass.value = '';
+            }, 2000);
+
+            danger.style.display = 'none'; // Clear any previous error messages
+        } else {
+            danger.style.display = 'block';
+        }
+
+        setTimeout(() => {
+            danger.style.display = 'none';
+        }, 4000);
+      }
+
+      // Add an event listener for the "Send" button
+      document.getElementById('send').addEventListener('click', validateInput);
+    </script>
+  </body>
+</html>
+
+
+    
   
   </body>
 

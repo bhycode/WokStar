@@ -3,7 +3,6 @@ body {
   overflow-x: hidden;
 }
 
-/* HEADER  */
 header {
   width: 100%;
   background-color: #502314;
@@ -17,17 +16,19 @@ header a {
 }
 
 header .active {
-  color: #febd00 !important;
+  color: #FEBD00 !important;
 }
 
 .header-basket {
   fill: white !important;
   width: 4%;
+
 }
 .burger-menu {
   fill: white !important;
 }
 /* HEADER */
+
 
 .container-contact {
     position: relative;
