@@ -213,6 +213,6 @@ request_quote.addEventListener("click", function() {
 
 confirm_order.addEventListener("click", function() {
     // Empty the basket and reload the page
-    localStorage.removeItem("foodItems");
+    // localStorage.removeItem("foodItems");
     location.reload();
 });

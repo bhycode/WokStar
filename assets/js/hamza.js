@@ -1,9 +1,10 @@
 // Basket
-let personalizedPlateToBasketPrimary = localStorage.getItem("personalizedPlate");
+let personalizedPlateToBasketPrimary = localStorage.getItem("personalizedPlateBasket");
 let itemsToBasket = JSON.parse(localStorage.getItem('foodItems'));
+let personalizedPlateToBasket = JSON.parse(personalizedPlateToBasketPrimary)
+
 // Basket
 
-let personalizedPlateToBasket = JSON.parse(personalizedPlateToBasketPrimary)
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -89,14 +90,13 @@ function calculateTotalPrice() {
     
     document.getElementById('totalPrice').textContent = totalPrice;
 
-    // Basket
-    personalizedPlateToBasket.price = totalPrice;
-    // Basket
 }
 
 // Basket
 document.getElementById("dataInput").addEventListener("click", function() {
-    personalizedPlateToBasket.sauce = document.getElementById("price1").innerHTML;
+    let totalPrice = parseFloat(document.getElementById('totalPrice').innerHTML.split(':')[1]);
+    personalizedPlateToBasket.price = totalPrice;
+    
     itemsToBasket.push(personalizedPlateToBasket);
     localStorage.setItem('foodItems', JSON.stringify(itemsToBasket));
 })
