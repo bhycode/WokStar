@@ -1,6 +1,7 @@
 
 // Get data from the basket
 const food_items_list = JSON.parse(localStorage.getItem('foodItems'));
+const quantity = JSON.parse(localStorage.getItem('quantity'));
 
 var table = document.getElementById("table");
 
@@ -25,7 +26,6 @@ food_items_list.forEach((plate) => {
 
 
 var itemContainer = document.createElement("tr");
-// itemContainer.className.add("item-container");
 
 itemContainer.innerHTML = `
     <td class="no-border-right"> </td>
