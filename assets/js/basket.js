@@ -207,7 +207,7 @@ let request_quote = document.getElementById("request-quote");
 let confirm_order = document.getElementById("confirm-order");
 
 request_quote.addEventListener("click", function() {
-    localStorage.setItem('foodItems', JSON.stringify(result));
+    // localStorage.setItem('foodItems', JSON.stringify(result));
     window.location.href = "../../devis.html";
 });
 
