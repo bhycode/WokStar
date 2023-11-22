@@ -175,6 +175,13 @@ function addItem(id) {
         result[id].quantity = 1;
         document.getElementById(`items-number${id}`).textContent = 1;
     }
+
+    // Modifiez l'attribut d'un objet spécifique dans la liste
+    var indiceObjetAModifier = id; // Indice de l'objet à modifier dans la liste
+    result[indiceObjetAModifier].attribut = result[id].quantity;
+
+    // Enregistrez la liste modifiée dans le localStorage
+    localStorage.setItem('foodItems', JSON.stringify(result));
 }
 
 function removeItem(id) {
@@ -185,6 +192,12 @@ function removeItem(id) {
         result[id].quantity = 20;
         document.getElementById(`items-number${id}`).textContent = 20;
     }
+    // Modifiez l'attribut d'un objet spécifique dans la liste
+    var indiceObjetAModifier = id; // Indice de l'objet à modifier dans la liste
+    result[indiceObjetAModifier].attribut = result[id].quantity;
+
+    // Enregistrez la liste modifiée dans le localStorage
+    localStorage.setItem('foodItems', JSON.stringify(result));
 }
 
 
