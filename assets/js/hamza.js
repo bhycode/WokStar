@@ -1,7 +1,10 @@
 // Basket
-const personalizedPlateToBasket = JSON.parse(localStorage.getItem("personalizedPlate"));
-const itemsToBasket = JSON.parse(localStorage.getItem('foodItems'));
+let personalizedPlateToBasketPrimary = localStorage.getItem("personalizedPlate");
+let itemsToBasket = JSON.parse(localStorage.getItem('foodItems'));
 // Basket
+
+let personalizedPlateToBasket = JSON.parse(personalizedPlateToBasketPrimary)
+
 
 document.addEventListener('DOMContentLoaded', function() {
     const validButton = document.querySelector('.boton');

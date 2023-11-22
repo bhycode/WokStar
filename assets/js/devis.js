@@ -1,6 +1,7 @@
 
 // Get data from the basket
 const food_items_list = JSON.parse(localStorage.getItem('foodItems'));
+const quantity = JSON.parse(localStorage.getItem('quantity'));
 
 var table = document.getElementById("table");
 
@@ -8,14 +9,14 @@ var table = document.getElementById("table");
 var total = 0
 food_items_list.forEach((plate) => {
     var itemContainer = document.createElement("tr");
-    total += plate.price
+    total += plate.price*plate.quantity
     ht = plate.price/(1+20/100)
     tva = plate.price - ht
 
     itemContainer.innerHTML = `
     <tr>
         <td>${plate.title}</td>
-        <td>${plate.id}</td>
+        <td>${plate.quantity}</td>
         <td>${ht.toFixed(2)}</td>
         <td>${plate.price}</td>
     </tr>
@@ -25,7 +26,6 @@ food_items_list.forEach((plate) => {
 
 
 var itemContainer = document.createElement("tr");
-// itemContainer.className.add("item-container");
 
 itemContainer.innerHTML = `
     <td class="no-border-right"> </td>
