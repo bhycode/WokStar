@@ -4,7 +4,7 @@ const food_items_list = JSON.parse(localStorage.getItem('foodItems'));
 
 var table = document.getElementById("table");
 
-// itemContainer.classList.add("basket-item-container");
+// ajouter les lignes dans tableau
 var total = 0
 food_items_list.forEach((plate) => {
     var itemContainer = document.createElement("tr");
@@ -23,9 +23,8 @@ food_items_list.forEach((plate) => {
     table.appendChild(itemContainer);
 });
 
-
+//ajouter total dans table
 var itemContainer = document.createElement("tr");
-// itemContainer.className.add("item-container");
 
 itemContainer.innerHTML = `
     <td class="no-border-right"> </td>
@@ -70,9 +69,6 @@ table.appendChild(itemContainer);
         // Rétablit l'affichage initial
         elementsToHide.forEach(element => {
             element.style.display = 'block';
-        });
-        parag.forEach(element => {
-            element.style.fontSize = '20px';
         });
     }
 

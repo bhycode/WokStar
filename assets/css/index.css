@@ -204,12 +204,28 @@ header .active {
         top: 600px;
     }
 
+    #plate2 {
+        top: 620px;
+    }
+
+    #plate3 {
+        top: 640px;
+    }
+
 }
 
 @media screen and (max-width: 1000px) {
 
     #plate1 {
         top: 620px;
+    }
+
+    #plate2 {
+        top: 760px;
+    }
+
+    #plate3 {
+        top: 880px;
     }
 
 /* Food types */

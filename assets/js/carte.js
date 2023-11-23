@@ -2,7 +2,7 @@
 let itemsToBasket = [];
 // Basket
 
-// document.addEventListener("DOMContentLoaded", function() {
+    //dropdown list
     const sections = document.querySelectorAll(".menu-section");
 
     const dropdownItems = document.querySelectorAll(".dropdown-item");
@@ -27,7 +27,7 @@ let itemsToBasket = [];
 
    
    
-// });
+
 const list_plat = [
         {
             id:1,
@@ -564,30 +564,11 @@ const list_plat = [
         },
     
     ];
-// // Function to update the HTML based on the provided data
-// function updatePersonalizationSection(itemIndex) {
-//     const item = list_plat[itemIndex]; // Assuming you're passing an index
-
-//     // Get references to HTML elements
-//     const titleElement = document.querySelector('.title');
-//     const nameOfFoodElement = document.querySelector('.tiltlebord');
-//     const descriptionElement = document.querySelector('.text-danger');
-//     const imageElement = document.querySelector('.pizza');
-
-//     // Update HTML content with data from the item
-//     titleElement.textContent = item.title; // Assuming 'title' exists in your item object
-//     nameOfFoodElement.textContent = item.title; // Assuming 'title' is the food name
-//     descriptionElement.textContent = item.description; // Assuming 'description' exists in your item object
-//     imageElement.src = item.image; // Assuming 'image' contains the path to the image
-// }
-
-// Call the function with an index to update the content for a specific food item
-// updatePersonalizationSection(0); // For example, updates with the first item
 
 
 localStorage.setItem("list_plat",JSON.stringify(list_plat))
 
-let list_plat2= JSON.parse(localStorage.getItem("list_plat"));
+let list_plat2 = JSON.parse(localStorage.getItem("list_plat")); //?
 
 // console.log(list_plat2)
 
@@ -687,6 +668,7 @@ const selectCat=(cat)=>{
 }
 
 
+//-----------------------------------------------
 
 
 
@@ -696,8 +678,7 @@ const selectCat=(cat)=>{
 
 
 
-
-
+//add to personalize
 
 function handlePersonalizeButtonClick(event, itemId) {
    const clickedObject = list_plat.find(item => item.id === itemId);
@@ -732,6 +713,24 @@ function handlePersonalizeButtonClick(event, itemId) {
       "personalizedPlate",
       JSON.stringify(personalizedPlate)
     );
+
+    // Basket
+    const personalizedPlateBasket = {
+        id: itemId,
+        image: imageSrc,
+        description: description,
+        price: parseFloat(price),
+        cat: title,
+        quantity: 1,
+        customized: true,
+        sauce: null,
+        size: null,
+        extra_items: null
+    };
+
+    localStorage.setItem("personalizedPlateBasket", JSON.stringify(personalizedPlateBasket));
+
+    // Basket
 
     // Redirect to the personalized.html page
     window.location.href = "personalisation.html";
