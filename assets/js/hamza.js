@@ -6,7 +6,6 @@ let personalizedPlateToBasket = JSON.parse(personalizedPlateToBasketPrimary)
 // Basket
 
 
-
 document.addEventListener('DOMContentLoaded', function() {
     const validButton = document.querySelector('.boton');
     const dropdowns = document.querySelectorAll('.adding select');
@@ -53,30 +52,31 @@ buyNowButton.addEventListener('click', navigateToPage);
 
 
 
-function addToPlate() {
-    const sauces = document.getElementById('saucesInput').value;
-    const size = document.getElementById('sizeInput').value;
-    const extraItems = document.getElementById('extraItemsInput').value;
+// function addToPlate() {
+//     const sauces = document.getElementById('saucesInput').value;
+//     const size = document.getElementById('sizeInput').value;
+//     const extraItems = document.getElementById('extraItemsInput').value;
 
     // Display the input data in the Personalization section
-    document.getElementById('displaySauces').innerText = sauces;
-    document.getElementById('displaySize').innerText = size;
-    document.getElementById('displayExtraItems').innerText = extraItems;
+    // document.getElementById('displaySauces').innerText = "test+++++" + sauces;
+    // document.getElementById('displaySize').innerText = size;
+    // document.getElementById('displayExtraItems').innerText = extraItems;
 
     // Log the data to the console
-    console.log('Sauces:', sauces);
-    console.log('Size:', size);
-    console.log('Extra Items:', extraItems);
+    // console.log('Sauces:', sauces);
+    // console.log('Size:', size);
+    // console.log('Extra Items:', extraItems);
 
 
     // Basket
-    personalizedPlateToBasket.sauce = sauces;
-    personalizedPlateToBasket.size = size;
-    personalizedPlateToBasket.extra_items = extraItems;
+    // console.log(personalizedPlateToBasket.sauce);
+    // personalizedPlateToBasket.sauce = sauces;
+    // personalizedPlateToBasket.size = size;
+    // personalizedPlateToBasket.extra_items = extraItems;
     // Basket
 
 
-}
+// }
 function calculateTotalPrice() {
     const souceInput = document.getElementById('souceInput');
     const sizeInput = document.getElementById('sizeInput');
@@ -92,13 +92,83 @@ function calculateTotalPrice() {
 
 }
 
+
+
+
+
+
+          // Retrieve personalized plate data from localStorage
+          const personalizedPlateData = localStorage.getItem("personalizedPlate");
+
+          // Parse the JSON string back to an object
+          const personalizedPlate = JSON.parse(personalizedPlateData);
+          
+          // Get elements by their IDs
+          const titleElement = document.getElementById("title1");
+          const descriptionElement = document.getElementById("description1");
+          const priceElement = document.getElementById("price1");
+          const imageElement = document.querySelector(".plat-div-d img");
+          
+          // Check if elements exist before populating
+          if (
+            personalizedPlate &&
+            titleElement &&
+            descriptionElement &&
+            priceElement &&
+            imageElement
+          ) {
+            // Populate the elements with personalized plate data
+            titleElement.textContent = personalizedPlate.title;
+            descriptionElement.textContent = personalizedPlate.description;
+            priceElement.textContent = personalizedPlate.price;
+            imageElement.src = personalizedPlate.imageSrc;
+          }
+          
+
+function calculateTotalPrice() {
+    // Get selected values from the dropdowns
+    const selectedSauce = document.getElementById("souceInput").value;
+    const selectedSize = document.getElementById("sizeInput").value;
+    const selectedExtra = document.getElementById("extraInput").value;
+
+
+
+
+
+
+    // Get the prices of the selected items
+    const saucePrice = parseInt(document.getElementById("souceInput").options[document.getElementById("souceInput").selectedIndex].getAttribute("data-price"));
+    const sizePrice = parseInt(document.getElementById("sizeInput").options[document.getElementById("sizeInput").selectedIndex].getAttribute("data-price"));
+    const extraPrice = parseInt(document.getElementById("extraInput").options[document.getElementById("extraInput").selectedIndex].getAttribute("data-price"));
+
+    // Calculate the total price
+    const totalPrice = saucePrice + sizePrice + extraPrice;
+
+    // Basket
+    personalizedPlateToBasket.sauce = selectedSauce;
+    personalizedPlateToBasket.size = selectedSize;
+    personalizedPlateToBasket.extra_items = selectedExtra;
+    personalizedPlateToBasket.price = totalPrice;
+    // Basket
+
+    // Create new elements to append
+    const description = document.createElement("p");
+    description.textContent = `Sauce: ${selectedSauce}, Size: ${selectedSize}, Extra: ${selectedExtra}`;
+
+    const price = document.createElement("p");
+    price.textContent = `Total Price: ${totalPrice} DH`;
+
+    // Append the new content to the existing section
+    const descriptionDiv = document.querySelector(".plat-div-d .description-div");
+    descriptionDiv.appendChild(description);
+    descriptionDiv.appendChild(price);
+}
+
+
+
 // Basket
 document.getElementById("dataInput").addEventListener("click", function() {
-    let totalPrice = parseFloat(document.getElementById('totalPrice').innerHTML.split(':')[1]);
-    personalizedPlateToBasket.price = totalPrice;
-    
     itemsToBasket.push(personalizedPlateToBasket);
     localStorage.setItem('foodItems', JSON.stringify(itemsToBasket));
 })
 // Basket
-

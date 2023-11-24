@@ -717,6 +717,7 @@ function handlePersonalizeButtonClick(event, itemId) {
     // Basket
     const personalizedPlateBasket = {
         id: itemId,
+        title: title,
         image: imageSrc,
         description: description,
         price: parseFloat(price),
