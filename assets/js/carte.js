@@ -2,7 +2,6 @@
 let itemsToBasket = [];
 // Basket
 
-
     const sections = document.querySelectorAll(".menu-section");
     const page=document.querySelector(".page")
     const dropdownItems = document.querySelectorAll(".dropdown-item");
@@ -569,7 +568,7 @@ const list_plat = [
 
 localStorage.setItem("list_plat",JSON.stringify(list_plat))
 
-let list_plat2= JSON.parse(localStorage.getItem("list_plat"));
+let list_plat2 = JSON.parse(localStorage.getItem("list_plat")); //?
 
 // console.log(list_plat2)
 
@@ -646,10 +645,6 @@ function addToCart(itemId) {
 //         pagination.appendChild(btn)
 //     }
 
-//     //show the first page by default
-//     show(1)
-// }
-// selectCat(selectedOption)
 
 
 
@@ -657,10 +652,7 @@ function addToCart(itemId) {
 
 
 
-
-
-
-
+//add to personalize
 
 function handlePersonalizeButtonClick(event, itemId) {
    const clickedObject = list_plat.find(item => item.id === itemId);
@@ -695,6 +687,24 @@ function handlePersonalizeButtonClick(event, itemId) {
       "personalizedPlate",
       JSON.stringify(personalizedPlate)
     );
+
+    // Basket
+    const personalizedPlateBasket = {
+        id: itemId,
+        image: imageSrc,
+        description: description,
+        price: parseFloat(price),
+        cat: title,
+        quantity: 1,
+        customized: true,
+        sauce: null,
+        size: null,
+        extra_items: null
+    };
+
+    localStorage.setItem("personalizedPlateBasket", JSON.stringify(personalizedPlateBasket));
+
+    // Basket
 
     // Redirect to the personalized.html page
     window.location.href = "personalisation.html";
