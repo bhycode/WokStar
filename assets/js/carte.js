@@ -2,17 +2,17 @@
 let itemsToBasket = [];
 // Basket
 
-// document.addEventListener("DOMContentLoaded", function() {
+
     const sections = document.querySelectorAll(".menu-section");
-
+    const page=document.querySelector(".page")
     const dropdownItems = document.querySelectorAll(".dropdown-item");
-
+    let selectedOption
     dropdownItems.forEach(item => {
         item.addEventListener("click", function (event) {
             event.preventDefault(); // Pour empêcher le lien de rediriger
-
-            const selectedOption = item.getAttribute("value");
-
+            
+            selectedOption = item.getAttribute("value");
+            console.log(selectedOption)
             sections.forEach(section => {
                 section.classList.add("hidden");
             });
@@ -22,12 +22,13 @@ let itemsToBasket = [];
             if (selectedSection) {
                 selectedSection.classList.remove("hidden");
             }
+
+
         });
     });
 
    
-   
-// });
+
 const list_plat = [
         {
             id:1,
@@ -564,25 +565,6 @@ const list_plat = [
         },
     
     ];
-// // Function to update the HTML based on the provided data
-// function updatePersonalizationSection(itemIndex) {
-//     const item = list_plat[itemIndex]; // Assuming you're passing an index
-
-//     // Get references to HTML elements
-//     const titleElement = document.querySelector('.title');
-//     const nameOfFoodElement = document.querySelector('.tiltlebord');
-//     const descriptionElement = document.querySelector('.text-danger');
-//     const imageElement = document.querySelector('.pizza');
-
-//     // Update HTML content with data from the item
-//     titleElement.textContent = item.title; // Assuming 'title' exists in your item object
-//     nameOfFoodElement.textContent = item.title; // Assuming 'title' is the food name
-//     descriptionElement.textContent = item.description; // Assuming 'description' exists in your item object
-//     imageElement.src = item.image; // Assuming 'image' contains the path to the image
-// }
-
-// Call the function with an index to update the content for a specific food item
-// updatePersonalizationSection(0); // For example, updates with the first item
 
 
 localStorage.setItem("list_plat",JSON.stringify(list_plat))
@@ -613,80 +595,61 @@ function addToCart(itemId) {
 }
 
 
-// function addToPersonalize(itemId) {
-//     // Find the object with the given id from the list_plat array
-//     const clickedObject = list_plat.find(item => item.id === itemId);
-
-//     if (clickedObject) {
-
-//         console.log("Added to storage:", clickedObject);
-//         localStorage.setItem("list_plat", JSON.stringify(clickedObject));
-//         console.log(localStorage)
-//     } else {
-//         console.log("not found.");
-//     }
-// }
 
 //--------------------------------
-const main = document.getElementById("menu-container")
-const pagination = document.getElementById("pagination")
 
-var selectedCat = selectedOption
-var totalBtn = 0
-const totalShow = 10
-const show = (page)=>{
-    main.innerHTML=""
-    let start = (page - 1) * totalShow
+// const main = document.getElementById("menu-container")
+// const pagination = document.getElementById("pagination")
+
+// var selectedCat = selectedOption
+// var totalBtn = 0
+// const totalShow = 10
+// const show = (page)=>{
+//     main.innerHTML=""
+//     let start = (page - 1) * totalShow
+//     //listByCat array includes items whose category (cat property) matches a selected category (selectedCat)
+//     const listByCat = list_plat.filter((item)=>{
+//         return item.cat === selectedCat 
+//     })
+
+//     let showedElements = listByCat.filter((element, index)=>{
+//         return index >= start && index < start + totalShow
+//     })
     
-    const listByCat = list_plat.filter((item)=>{
-        return item.cat === selectedCat 
-    })
-
-    let showedElements = listByCat.filter((element, index)=>{
-        return index >= start && index < start + totalShow
-    })
     
-    
-    showedElements.forEach((item)=>{
-        let htlmElem = document.createElement("p")
-        htlmElem.setAttribute("id",item.id)
-        htlmElem.innerHTML =  `Name : ${item.name} Price:${item.price}`
+//     showedElements.forEach((item)=>{
+//         let htlmElem = document.createElement("p")
+//         htlmElem.setAttribute("id",item.id)
+//         htlmElem.innerHTML =  `Name : ${item.name} Price:${item.price}`
 
-        // let btn = document.createElement("button")
-        // btn.innerHTML = "show data"
-        // btn.addEventListener("click",function(){ 
-        //     showData(item.id)
-        // })
-        // htlmElem.appendChild(btn)
+//         main.appendChild(htlmElem)
+//     })
 
-        main.appendChild(htlmElem)
-    })
+// }
 
-}
+// const selectCat=(cat)=>{
 
-const selectCat=(cat)=>{
-    selectedCat = selectedOption   
-    const listByCat = list.filter((item)=>{
-        return item.cat === selectedCat 
-    })
+//     selectedCat = cat   
+//     const listByCat = list_plat.filter((item)=>{
+//         return item.cat === selectedCat 
+//     })
 
-    totalBtn = Math.ceil((listByCat.length) / totalShow)
-    pagination.innerHTML=""
-    for(let i =1 ; i <= totalBtn; i++){
-        console.log(totalBtn);
-        let btn = document.createElement("button")
-        btn.innerHTML = i
-        btn.addEventListener("click",function(){ 
-            show(i)
-        })
-        pagination.appendChild(btn)
-    }
+//     totalBtn = Math.ceil((listByCat.length) / totalShow)
+//     pagination.innerHTML=""
+//     for(let i =1 ; i <= totalBtn; i++){
+//         console.log(totalBtn);
+//         let btn = document.createElement("button")
+//         btn.innerHTML = i
+//         // btn.addEventListener("click",function(){ 
+//         //     show(i)
+//         // })
+//         pagination.appendChild(btn)
+//     }
 
-    //show the first page by default
-    show(1)
-}
-selectCat(selectedOption)
-
+//     //show the first page by default
+//     show(1)
+// }
+// selectCat(selectedOption)
 
 
 
