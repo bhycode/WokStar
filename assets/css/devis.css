@@ -4,7 +4,7 @@ header {
     background-color: #502314;
     position: fixed;
     z-index: 10;
-    margin-bottom: 1000px !important;
+    /* margin-bottom: 1000px !important; */
     top: 0px;
   }
   
@@ -155,11 +155,22 @@ table tr td {
 
 }
 
-/* @media screen and (min-width: 768px) {
+@media screen and (min-width: 420px) {
+    #devis h1{
+        margin-top: 35%;
+    }
     .infos-customer p{
-        font-size: 15px;
+        font-size: 13px;
     }
     .donnees-entreprise p{
         margin-top: 3%;
+        font-size: 12px;
     }
-} */
+    
+    .donnees-entreprise{
+        margin-right: 20%;
+    }
+    td{
+        font-size: 12px;
+    }
+}

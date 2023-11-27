@@ -29,7 +29,7 @@ var itemContainer = document.createElement("tr");
 itemContainer.innerHTML = `
     <td class="no-border-right"> </td>
     <td class="no-border-left no-border-right"> </td>
-    <td class="no-border-left no-border-right">Total : </td>
+    <td class="no-border-left no-border-right">Total: </td>
     <td class="no-border-left">${total} dh</td>
 `;
 table.appendChild(itemContainer);
