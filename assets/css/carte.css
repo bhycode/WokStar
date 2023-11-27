@@ -173,8 +173,7 @@ header .active {
   .section1 {
     height: auto; /* Changez la hauteur en automatique pour que le contenu détermine la taille */
     background-size: contain; /* Ajustez la taille de l'image pour s'adapter à la section */
-    background-position: top;
-
+    background-position: top; 
     background-repeat: no-repeat;
   }
   .img-div h1 {
